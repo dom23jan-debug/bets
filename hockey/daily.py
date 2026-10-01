@@ -1,9 +1,15 @@
-"""Run the value scan for several leagues and build one ticket (best bet per match).
+"""Run the value scan for every league with games on a date and build one ticket (best bet per match).
 
-Usage: python3 -m hockey.daily 2026-10-01 shl del nl elh sk fr
+Usage: python3 -m hockey.daily [YYYY-MM-DD] [league ...]
+  no date    -> today (Central European time)
+  no leagues -> all registered leagues (only those with games that day produce output)
+NHL runs separately: python3 nhl_value.py <US date> (games are at night CET).
 """
+import datetime
 import sys
 
+from .leagues import LEAGUES
+from .livesport import TZ
 from .scan import analyse
 
 # Lower-variance markets are preferred when EV is similar; exotic tails are penalised.
@@ -24,15 +30,26 @@ def best_per_match(picks):
 
 
 def main():
-    date, leagues = sys.argv[1], sys.argv[2:]
+    args = sys.argv[1:]
+    if args and args[0][:4].isdigit():
+        date, leagues = args[0], args[1:]
+    else:
+        date, leagues = datetime.datetime.now(TZ).date().isoformat(), args
+    leagues = leagues or list(LEAGUES)
     picks = []
     for lg in leagues:
-        picks += analyse(lg, date)
+        try:
+            picks += analyse(lg, date)
+        except Exception as exc:  # one broken league must not stop the others
+            print(f"\n## {lg}: chyba {exc!r}")
     ticket = best_per_match(picks)
-    print("\n## Tiket (1 sázka na zápas, kurz ≤ 6)")
+    print(f"\n## Tiket {date} (1 sázka na zápas, kurz ≤ {MAX_ODDS:g}) — před doporučením ověř každý tip (viz CLAUDE.md)")
     for p in ticket:
         print(f"  {p['start']} [{p['league']}] {p['game']:32} {p['label']:46} @ {p['odds']:.2f} {p['book']:12}"
-              f" EV {p['ev']:.3f} | value od {p['min_odds']:.2f} | ¼K {100*p['stake']:.1f} %")
+              f" EV {p['ev']:.3f} | value od {p['min_odds']:.2f} | ¼K {100*p['stake']:.1f} %"
+              f" | model {100*p['p_model']:.1f} % trh {100*p['p_market']:.1f} %")
+    if not ticket:
+        print("  žádná value")
 
 
 if __name__ == "__main__":
