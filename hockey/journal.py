@@ -2,6 +2,7 @@
 
   python3 -m hockey.journal              summary + full list (markdown, for chat)
   python3 -m hockey.journal --html PATH  also write a standalone HTML page of the journal
+Capital: journal/bankroll.json {"start": 10000, "currency": "Kč"} -> amounts shown next to %.
 
 Columns: date, league, match, market, selection, bookmaker, odds, stake_pct, ev, closing_odds,
 result (win/loss/push/half-win/half-loss/open), profit_pct. CLV = odds / closing_odds - 1.
@@ -12,7 +13,23 @@ import html
 import os
 import sys
 
+import json
+
 PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "journal", "bets.csv")
+BANKROLL = os.path.join(os.path.dirname(PATH), "bankroll.json")
+
+
+def bankroll():
+    """Starting capital (flat staking: stake_pct and profit_pct are % of this amount). None = % only."""
+    try:
+        b = json.load(open(BANKROLL, encoding="utf-8"))
+    except (OSError, ValueError):
+        return None, "Kč"
+    return b.get("start"), b.get("currency", "Kč")
+
+
+def money(pct, start, cur):
+    return f"{pct * start / 100:+,.0f} {cur}".replace(",", " ") if start else ""
 RESULT_CZ = {"win": "výhra", "loss": "prohra", "push": "vráceno", "half-win": "½ výhra",
              "half-loss": "½ prohra", "open": "otevřená", "": "otevřená"}
 
@@ -37,9 +54,18 @@ def summary(rows):
 
 def markdown(rows):
     by, clv, open_bets = summary(rows)
-    out = ["**Souhrn**", "", "| Liga | Sázek | Výher | Vsazeno | Zisk | ROI |", "|---|---|---|---|---|---|"]
+    start, cur = bankroll()
+    out = ["**Souhrn**", ""]
+    if start:
+        tot = by.get("CELKEM", {"profit": 0.0})
+        open_stake = sum(float(r["stake_pct"]) for r in open_bets)
+        out += [f"Kapitál: start {start:,.0f} {cur} → aktuálně **{start * (1 + tot['profit'] / 100):,.0f} {cur}**"
+                .replace(",", " ") + f" ({money(tot['profit'], start, cur)}), v otevřených sázkách "
+                + f"{open_stake * start / 100:,.0f} {cur}".replace(",", " "), ""]
+    out += ["| Liga | Sázek | Výher | Vsazeno | Zisk | ROI |", "|---|---|---|---|---|---|"]
     for k, s in sorted(by.items(), key=lambda kv: (kv[0] != "CELKEM", kv[0])):
-        out.append(f"| {k} | {s['n']} | {s['won']} | {s['stake']:.2f} % | {s['profit']:+.2f} % | "
+        kc = f" ({money(s['profit'], start, cur)})" if start else ""
+        out.append(f"| {k} | {s['n']} | {s['won']} | {s['stake']:.2f} % | {s['profit']:+.2f} %{kc} | "
                    f"{100 * s['profit'] / s['stake']:+.1f} % |")
     if clv:
         out.append(f"\nCLV: průměr {100 * sum(clv) / len(clv):+.1f} % ({len(clv)} sázek se zavíracím kurzem)")
@@ -47,8 +73,10 @@ def markdown(rows):
             "| Datum | Liga | Zápas | Sázka | Kurz | Vklad | EV | Výsledek | Zisk |", "|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(rows, key=lambda r: r["date"], reverse=True):
         profit = f"{float(r['profit_pct']):+.2f} %" if r["profit_pct"] else "–"
+        stake = f"{r['stake_pct']} %" + (f" ({float(r['stake_pct']) * start / 100:,.0f} {cur})".replace(",", " ")
+                                          if start else "")
         out.append(f"| {r['date']} | {r['league']} | {r['match']} | {r['market']}: {r['selection']} | "
-                   f"{r['odds']} {r['bookmaker']} | {r['stake_pct']} % | {r['ev']} | "
+                   f"{r['odds']} {r['bookmaker']} | {stake} | {r['ev']} | "
                    f"{RESULT_CZ.get(r['result'], r['result'])} | {profit} |")
     return "\n".join(out)
 
@@ -58,7 +86,12 @@ def html_page(rows):
     tot = by.get("CELKEM", {"n": 0, "won": 0, "stake": 0.0, "profit": 0.0})
     roi = 100 * tot["profit"] / tot["stake"] if tot["stake"] else 0.0
     e = html.escape
-    tiles = [("Bilance", f"{tot['profit']:+.2f} %", "bankrollu"), ("ROI", f"{roi:+.1f} %", f"{tot['n']} vyhodnocených"),
+    start, cur = bankroll()
+    tiles = []
+    if start:
+        tiles.append(("Kapitál", f"{start * (1 + tot['profit'] / 100):,.0f} {cur}".replace(",", " "),
+                      f"start {start:,.0f} {cur}".replace(",", " ")))
+    tiles += [("Bilance", f"{tot['profit']:+.2f} %", money(tot["profit"], start, cur) or "bankrollu"), ("ROI", f"{roi:+.1f} %", f"{tot['n']} vyhodnocených"),
              ("Úspěšnost", f"{100 * tot['won'] / tot['n']:.0f} %" if tot["n"] else "–", f"{tot['won']} výher"),
              ("Otevřené", str(len(open_bets)), "čekají na výsledek")]
     if clv:
@@ -75,7 +108,9 @@ def html_page(rows):
         profit = f"{float(r['profit_pct']):+.2f} %" if r["profit_pct"] else "–"
         bet_rows += (f"<tr><td>{e(r['date'])}</td><td>{e(r['league'])}</td><td>{e(r['match'])}</td>"
                      f"<td>{e(r['market'])}: <b>{e(r['selection'])}</b></td><td>{e(r['odds'])}<br>"
-                     f"<small>{e(r['bookmaker'])}</small></td><td>{e(r['stake_pct'])} %</td><td>{e(r['ev'])}</td>"
+                     f"<small>{e(r['bookmaker'])}</small></td><td>{e(r['stake_pct'])} %"
+                     + (f"<br><small>{float(r['stake_pct']) * start / 100:,.0f} {e(cur)}</small>".replace(",", " ")
+                        if start else "") + f"</td><td>{e(r['ev'])}</td>"
                      f"<td><span class='tag {cls}'>{RESULT_CZ.get(res, res)}</span></td>"
                      f"<td class='{cls}'>{profit}</td></tr>")
     tiles_html = "".join(f"<div class='tile'><div class='lab'>{e(a)}</div><div class='val'>{e(b)}</div>"
@@ -96,7 +131,7 @@ padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}} th{{fo
 font-weight:600}} tr:last-child td{{border-bottom:0}} .pos{{color:var(--pos)}} .neg{{color:var(--neg)}}
 .tag{{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}}
 </style></head><body><main><h1>Sázkařský deník</h1>
-<div class="muted">Hokejové value bety · vklady v % bankrollu · {len(rows)} sázek</div>
+<div class="muted">Hokejové value bety · vklady v % startovního kapitálu · {len(rows)} sázek</div>
 <div class="tiles">{tiles_html}</div>
 <h2>Podle ligy</h2><div class="wrap"><table><tr><th>Liga</th><th>Sázek</th><th>Výher</th><th>Vsazeno</th>
 <th>Zisk</th><th>ROI</th></tr>{league_rows}</table></div>

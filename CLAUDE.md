@@ -38,6 +38,16 @@ full workflow below — no further questions needed unless a decision is genuine
    user with SendUserFile (display: render) so it opens in the app. If SendUserFile is unavailable,
    paste the full markdown table instead.
 
+## Journal edits and capital (user requests in plain Czech)
+- „smaž sázku…", „opravit kurz…", „přidej sázku…", „vsadil jsem jen X": edit `journal/bets.csv`
+  directly (keep columns; profit_pct = stake_pct·(odds−1) for win, −stake_pct for loss, 0 for push,
+  halves for half-win/half-loss), show the changed rows, commit & push to `main`.
+- „nastav kapitál 10 000 Kč" (or a new deposit): write `journal/bankroll.json`
+  `{"start": <amount>, "currency": "Kč", "since": "<date>"}`. Stakes and profits stay in % of the
+  starting capital (flat staking); the journal shows Kč next to %. When capital is set, every ticket
+  also shows the stake in Kč (stake % × current capital from `python3 -m hockey.journal`), rounded
+  to 10 Kč. Never change past bets' % when capital changes.
+
 ## Maintenance (only when asked or monthly)
 - `python3 -m hockey.tune <league ...>` re-tunes hyper-parameters (walk-forward backtest, ~5 min
   per league) → `data/params.json`. Liiga and Maxa use defaults until tuned.
