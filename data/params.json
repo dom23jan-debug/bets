@@ -15,5 +15,56 @@
   "baseline_total": 0.6776,
   "gain_pct": 0.04,
   "n_test": 296
+ },
+ "del": {
+  "params": {
+   "half_life": 30,
+   "offseason": 1.0,
+   "shot_weight": 0.6,
+   "ridge": 0.5,
+   "total_k": 0.25
+  },
+  "logloss": 1.6372,
+  "baseline": 1.69,
+  "logloss_1x2": 0.951,
+  "baseline_1x2": 1.0064,
+  "logloss_total": 0.6862,
+  "baseline_total": 0.6837,
+  "gain_pct": 3.13,
+  "n_test": 308
+ },
+ "nl": {
+  "params": {
+   "half_life": 120,
+   "offseason": 1.0,
+   "shot_weight": 0.6,
+   "ridge": 0.5,
+   "total_k": 1.0
+  },
+  "logloss": 1.7315,
+  "baseline": 1.7553,
+  "logloss_1x2": 1.0428,
+  "baseline_1x2": 1.0629,
+  "logloss_total": 0.6887,
+  "baseline_total": 0.6924,
+  "gain_pct": 1.36,
+  "n_test": 280
+ },
+ "elh": {
+  "params": {
+   "half_life": 60,
+   "offseason": 1.0,
+   "shot_weight": 0.8,
+   "ridge": 0.5,
+   "total_k": 0.25
+  },
+  "logloss": 1.6889,
+  "baseline": 1.7214,
+  "logloss_1x2": 1.0145,
+  "baseline_1x2": 1.0479,
+  "logloss_total": 0.6744,
+  "baseline_total": 0.6735,
+  "gain_pct": 1.89,
+  "n_test": 283
  }
 }
