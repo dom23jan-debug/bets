@@ -27,7 +27,8 @@ full workflow below — no further questions needed unless a decision is genuine
 5. **Answer** (Czech, concise): ticket table — time, match, bet, odds + bookmaker, EV, „value od"
    (minimum odds), stake % — plus one line „proč" per bet, then rejected candidates in one line each.
    If nothing passes, say clearly „dnes nesázet".
-6. **Journal**: append the recommended bets to `journal/bets.csv` with result `open`.
+6. **Journal**: append the recommended bets to `journal/bets.csv` with result `open` — skip any bet already
+   in the journal for the same date + match (no duplicates when the analysis is re-run the same day).
 7. **Commit & push** changed data/journal/params directly to `main` (the default branch), not to a new branch or PR.
 
 ## Maintenance (only when asked or monthly)
