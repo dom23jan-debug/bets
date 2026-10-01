@@ -1,0 +1,19 @@
+{
+ "shl": {
+  "params": {
+   "half_life": 30,
+   "offseason": 0.7,
+   "shot_weight": 0.6,
+   "ridge": 0.5,
+   "total_k": 0.0
+  },
+  "logloss": 1.7156,
+  "baseline": 1.7163,
+  "logloss_1x2": 1.0342,
+  "baseline_1x2": 1.0387,
+  "logloss_total": 0.6814,
+  "baseline_total": 0.6776,
+  "gain_pct": 0.04,
+  "n_test": 296
+ }
+}
