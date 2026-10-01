@@ -20,3 +20,16 @@ Livesport path: `/hokej/svedsko/shl/`.
 
 ## Quirks & betting notes
 Liga s nejnižším skórováním z velkých evropských lig a vysokou vyrovnaností → kurzy na favority bývají přesné, value spíš v totalech a handicapech. Pozor na nováčka z Allsvenskan (krátká historie v datech, model ho táhne k průměru).
+
+## Official data (shl.se Sportality API, no key needed)
+- Seasons/series: `https://www.shl.se/api/sports-v2/season-series-game-types-filter`
+  (SHL series `qQ9-bb0bzEWUk`, regular season game type `qQ9-af37Ti40B`; season uuids 2026 `ndcf81nlb3`,
+  2025 `xs4m9qupsi`, 2024 `qeb-73bZkIm9A`).
+- Schedule: `/api/sports-v2/game-schedule?seasonUuid=..&seriesUuid=..&gameTypeUuid=..&gamePlace=all&played=all`
+- Per game: `/api/gameday/team-stats/<gameUuid>` (SOG, PP, hits, blocks per period),
+  `/api/gameday/play-by-play/<gameUuid>` (every shot with X/Y in dm from goal line, goals with
+  strength `goalStatus` EQ/PP1/SH1 and `isEmptyNetGoal`, goalkeeper changes, penalties).
+- No published xG → own model `python3 -m hockey.shl_xg` (logistic regression on distance, angle,
+  rebound, 3rd period; AUC 0.756 on 68,873 shots 2024–26). Writes `h_xg/a_xg` into `data/shl.json`.
+- Backtest (Oct 2026): xG-based ratings ≈ SOG-based ratings for 1X2 (log-loss 1.0198 vs 1.0189),
+  so the default model keeps SOG; xG is used for analysis (finishing luck: goals − xG).

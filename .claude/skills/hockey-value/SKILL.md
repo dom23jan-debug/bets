@@ -43,10 +43,22 @@ with ¼-Kelly stakes (0.5–3 % bankroll). Be honest: if nothing has value, say 
    stake (¼ Kelly, cap 3 %, floor 0.5 % — below that say "vynechat"), plus a clear verdict.
 7. Commit code/param changes and push to the working branch.
 
+## Data source status (checked 1 Oct 2026 from the cloud container)
+| Source | Status | Use |
+|---|---|---|
+| livesport.cz + flashscore.ninja + lsapp.eu | OK | results, periods, SOG, odds — backbone for all leagues |
+| liiga.fi | OK (domain must be allowed) | Liiga xG per game |
+| shl.se, stats.swehockey.se | OK | SHL play-by-play with shot coordinates → own xG |
+| penny-del.org, nationalleague.ch, data.sihf.ch, hockeyfrance.com, hockeytech.com | reachable | not integrated yet (next step: lineups/goalies) |
+| eliteprospects.com, hockeyslovakia.sk, hokej.cz, tipsport.cz, chance.cz | 403 (site blocks cloud/foreign IPs) | unusable |
+| tiposextraliga.sk | does not resolve | league renamed (Tipsport liga) |
+
 ## Interpretation rules learned so far
 - Hockey 1X2 is noisy: a good model beats league base rates by only ~0.5 % log-loss; the market is
   usually better → keep w_model ≤ 0.5 and treat large disagreements with suspicion.
 - Team-specific totals are mostly noise; the league mean is a strong prior (`total_k`).
 - Empty-net goals make 2–3 goal margins common → never price handicaps/totals with plain Poisson.
+- Cold start: the summer break must not age last season's data (handled via "hockey days"), and
+  promoted teams start below average — otherwise October ratings rest on 3–4 games (bug fixed 1 Oct 2026).
 - Track every bet (stake, odds, closing odds, result) — judge by CLV and ROI over hundreds of bets,
   not one evening.

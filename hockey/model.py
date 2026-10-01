@@ -16,16 +16,27 @@ from scipy.optimize import minimize
 
 DAY = 86400
 LEAGUE_HALF_LIFE = 120   # days, for the league-wide scoring level
+NEW_TEAM_PRIOR = -0.08   # log-rate prior for attack and defence of promoted teams
 
 
 class Ratings:
-    def __init__(self, matches, now, half_life=180, offseason=0.6, ridge=6.0, shot_weight=0.5, total_k=1.0):
+    def __init__(self, matches, now, half_life=180, offseason=0.6, ridge=6.0, shot_weight=0.5, total_k=1.0,
+                 current="current", shot_key="sog"):
         self.now, self.hl, self.off, self.ridge, self.ws = now, half_life, offseason, ridge, shot_weight
-        self.total_k = total_k
+        self.total_k, self.current = total_k, current
         teams = sorted({m["home"] for m in matches} | {m["away"] for m in matches})
         self.idx = {t: i for i, t in enumerate(teams)}
         self.n = len(teams)
-        cur = [m for m in matches if m.get("season") == "current"]
+        cur = [m for m in matches if m.get("season") == current]
+        prev = [m for m in matches if m.get("season") != current]
+        # summer break does not age the data: previous-season matches are aged in "hockey days"
+        self.gap = 0.0
+        if cur and prev:
+            self.gap = max(0.0, min(m["start"] for m in cur) - max(m["start"] for m in prev) - 7 * DAY)
+        # promoted / new teams (no previous-season data) start below average
+        last_prev = max(prev, key=lambda m: m["start"])["season"] if prev else None
+        prev_teams = {t for m in prev if m.get("season") == last_prev for t in (m["home"], m["away"])}
+        self.prior = np.array([NEW_TEAM_PRIOR if (prev_teams and t not in prev_teams) else 0.0 for t in teams])
         self.weights = np.array([self._weight(m) for m in matches])
         self.matches = matches
         h = np.array([self.idx[m["home"]] for m in matches])
@@ -33,9 +44,10 @@ class Ratings:
         rg = np.array([[sum(p[0] or 0 for p in m["periods"]), sum(p[1] or 0 for p in m["periods"])]
                        for m in matches], float)
         self.goal = self._fit(h, a, rg[:, 0], rg[:, 1], self.weights)
-        has = np.array(["h_sog" in m for m in matches])
+        hk, ak = "h_" + shot_key, "a_" + shot_key
+        has = np.array([hk in m for m in matches])
         if has.sum() > 30:
-            sog = np.array([[m.get("h_sog", 0), m.get("a_sog", 0)] for m in matches], float)
+            sog = np.array([[m.get(hk, 0), m.get(ak, 0)] for m in matches], float)
             self.shot = self._fit(h[has], a[has], sog[has, 0], sog[has, 1], self.weights[has])
             w = self.weights[has]
             self.sh_pct = (w * rg[has].sum(1)).sum() / (w * sog[has].sum(1)).sum()
@@ -45,30 +57,33 @@ class Ratings:
         lw = np.array([0.5 ** (max(0.0, (now - m["start"]) / DAY) / LEAGUE_HALF_LIFE) for m in matches])
         self.league_home = (lw * rg[:, 0]).sum() / lw.sum()
         self.league_away = (lw * rg[:, 1]).sum() / lw.sum()
-        self.current_teams = {m["home"] for m in cur} | {m["away"] for m in cur}
+        self.current_teams = {m["home"] for m in cur} | {m["away"] for m in cur} or set(teams)
 
     def _weight(self, m):
-        age = max(0.0, (self.now - m["start"]) / DAY)
-        w = 0.5 ** (age / self.hl)
-        if m.get("season") != "current":
+        age = self.now - m["start"]
+        if m.get("season") != self.current:
+            age -= self.gap
+        w = 0.5 ** (max(0.0, age / DAY) / self.hl)
+        if m.get("season") != self.current:
             w *= self.off
         return w
 
     def _fit(self, h, a, yh, ya, w):
-        n = self.n
+        n, pr = self.n, self.prior
 
         def nll(x):
             mu, hfa, att, de = x[0], x[1], x[2:2 + n], x[2 + n:]
             lh = np.exp(mu + hfa + att[h] - de[a])
             la = np.exp(mu + att[a] - de[h])
             ll = (w * (yh * np.log(lh) - lh + ya * np.log(la) - la)).sum()
-            pen = self.ridge * np.exp(mu) * ((att ** 2).sum() + (de ** 2).sum())
+            ra, rd = att - pr, de - pr
+            pen = self.ridge * np.exp(mu) * ((ra ** 2).sum() + (rd ** 2).sum())
             gmu = (w * (yh - lh + ya - la)).sum()
             ghfa = (w * (yh - lh)).sum()
             gatt = np.bincount(h, w * (yh - lh), n) + np.bincount(a, w * (ya - la), n)
             gde = -np.bincount(a, w * (yh - lh), n) - np.bincount(h, w * (ya - la), n)
             c = 2 * self.ridge * np.exp(mu)
-            grad = np.concatenate([[gmu - pen], [ghfa], gatt - c * att, gde - c * de])
+            grad = np.concatenate([[gmu - pen], [ghfa], gatt - c * ra, gde - c * rd])
             return -(ll - pen), -grad
 
         x0 = np.zeros(2 + 2 * n)

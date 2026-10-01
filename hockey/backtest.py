@@ -36,7 +36,7 @@ def run(matches, regular, test_season="2025-2026", grid=GRID, total_grid=(0.0, 0
     test = [m for m in regular if m.get("season") == test_season]
     if len(test) < 60:
         return None
-    start, end = test[0]["start"] + 4 * WEEK, test[-1]["start"]   # skip first weeks (cold start)
+    start, end = test[0]["start"] + WEEK, test[-1]["start"]   # include early season (cold start matters)
     cuts = list(range(start, end, WEEK))
     freq = [sum(outcome(m) == k for m in test) / len(test) for k in range(3)]
     over = sum(sum(regulation(m)) > TOTAL_LINE for m in test) / len(test)
@@ -54,6 +54,8 @@ def run(matches, regular, test_season="2025-2026", grid=GRID, total_grid=(0.0, 0
 
 
 def _evaluate(matches, test, cuts, shape, adj, configs):
+    # matches after the test season must not leak in
+    matches = [m for m in matches if m["start"] <= test[-1]["start"]]
     results = []
     for params in configs:
         ll, llt, n = 0.0, 0.0, 0
@@ -62,7 +64,7 @@ def _evaluate(matches, test, cuts, shape, adj, configs):
             ahead = [m for m in test if cut <= m["start"] < cut + WEEK]
             if not ahead:
                 continue
-            r = Ratings(hist, now=cut, **params)
+            r = Ratings(hist, now=cut, current=test[0]["season"], **params)
             for m in ahead:
                 lh, la = r.expected_goals(m["home"], m["away"])
                 d = score_dist(lh * adj, la * adj, shape)
