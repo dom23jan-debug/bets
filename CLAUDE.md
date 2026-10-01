@@ -28,7 +28,7 @@ full workflow below — no further questions needed unless a decision is genuine
    (minimum odds), stake % — plus one line „proč" per bet, then rejected candidates in one line each.
    If nothing passes, say clearly „dnes nesázet".
 6. **Journal**: append the recommended bets to `journal/bets.csv` with result `open`.
-7. **Commit & push** changed data/journal/params to the current branch.
+7. **Commit & push** changed data/journal/params directly to `main` (the default branch), not to a new branch or PR.
 
 ## Maintenance (only when asked or monthly)
 - `python3 -m hockey.tune <league ...>` re-tunes hyper-parameters (walk-forward backtest, ~5 min
