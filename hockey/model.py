@@ -15,6 +15,7 @@ import numpy as np
 from scipy.optimize import minimize
 
 DAY = 86400
+LEAGUE_HALF_LIFE = 120   # days, for the league-wide scoring level
 
 
 class Ratings:
@@ -40,8 +41,10 @@ class Ratings:
             self.sh_pct = (w * rg[has].sum(1)).sum() / (w * sog[has].sum(1)).sum()
         else:
             self.shot = None
-        self.league_home = (self.weights * rg[:, 0]).sum() / self.weights.sum()
-        self.league_away = (self.weights * rg[:, 1]).sum() / self.weights.sum()
+        # league scoring level: longer window than team ratings (totals need a stable mean)
+        lw = np.array([0.5 ** (max(0.0, (now - m["start"]) / DAY) / LEAGUE_HALF_LIFE) for m in matches])
+        self.league_home = (lw * rg[:, 0]).sum() / lw.sum()
+        self.league_away = (lw * rg[:, 1]).sum() / lw.sum()
         self.current_teams = {m["home"] for m in cur} | {m["away"] for m in cur}
 
     def _weight(self, m):
