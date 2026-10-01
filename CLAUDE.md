@@ -31,6 +31,13 @@ full workflow below — no further questions needed unless a decision is genuine
    in the journal for the same date + match (no duplicates when the analysis is re-run the same day).
 7. **Commit & push** changed data/journal/params directly to `main` (the default branch), not to a new branch or PR.
 
+## „Otevři deník" / „ukaž deník" / „jak jsem na tom"
+1. Settle open bets first if their matches are finished (step 2 above), commit & push to `main`.
+2. `python3 -m hockey.journal --html <scratchpad>/denik.html` → paste the markdown summary
+   (Souhrn + open bets; the full list only if asked) into the answer and send the HTML page to the
+   user with SendUserFile (display: render) so it opens in the app. If SendUserFile is unavailable,
+   paste the full markdown table instead.
+
 ## Maintenance (only when asked or monthly)
 - `python3 -m hockey.tune <league ...>` re-tunes hyper-parameters (walk-forward backtest, ~5 min
   per league) → `data/params.json`. Liiga and Maxa use defaults until tuned.
