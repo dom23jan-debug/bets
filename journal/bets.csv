@@ -12,8 +12,9 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-01,nl,Ambri-Piotta – Langnau,Počet gólů 60 min,Více než 6.5,Tipsport,2.79,0.5,1.070,2.52,loss,-0.5
 2026-10-02,sk,Trenčín – Spišská N. Ves,Sázka bez remízy 60 min,Spišská N. Ves,Fortuna,2.65,0.5,1.105,2.15,win,0.825
 2026-10-03,maxa,Tábor – Přerov,Počet gólů 60 min,Méně než 4.5,Tipsport,2.32,1.0,1.10,2.31,loss,-1.0
-2026-10-04,fr,Angers – Bordeaux,1X2 60 min,Bordeaux,Fortuna,3.55,0.5,1.098,,open,
-2026-10-04,sk,Žilina – B. Bystrica,Dvojitá šance 60 min,X2,Chance,2.33,0.5,1.111,,open,
-2026-10-04,elh,Pardubice – Sparta Praha,Sázka bez remízy 60 min,Sparta Praha,Chance,2.83,0.5,1.066,,open,
-2026-10-04,del,Mnichov – Augsburg,Vítěz vč. prodl.,Augsburg,Betano,3.50,0.5,1.071,,open,
-2026-10-04,maxa,Havířov – Vsetín,Počet gólů 60 min,Méně než 5,Tipsport,2.28,1.0,1.129,,open,
+2026-10-04,fr,Angers – Bordeaux,1X2 60 min,Bordeaux,Fortuna,3.55,0.5,1.098,3.00,loss,-0.5
+2026-10-04,sk,Žilina – B. Bystrica,Dvojitá šance 60 min,X2,Chance,2.33,0.5,1.111,2.44,win,0.665
+2026-10-04,elh,Pardubice – Sparta Praha,Sázka bez remízy 60 min,Sparta Praha,Chance,2.83,0.5,1.066,2.89,loss,-0.5
+2026-10-04,del,Mnichov – Augsburg,Vítěz vč. prodl.,Augsburg,Betano,3.50,0.5,1.071,3.60,loss,-0.5
+2026-10-04,maxa,Havířov – Vsetín,Počet gólů 60 min,Méně než 5,Tipsport,2.28,1.0,1.129,2.28,loss,-1.0
+2026-10-04,nhl,Vancouver – Vegas,Dvojitá šance 60 min,1X,Chance,2.35,0.5,1.071,,open,
