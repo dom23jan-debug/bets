@@ -15,7 +15,7 @@ from .scan import analyse
 # Lower-variance markets are preferred when EV is similar; exotic tails are penalised.
 PREFERRED = {"HOME_DRAW_AWAY": 1.0, "ASIAN_HANDICAP": 1.0, "OVER_UNDER": 1.0, "DRAW_NO_BET": 1.0,
              "HOME_AWAY": 1.0, "DOUBLE_CHANCE": 0.98, "BOTH_TEAMS_TO_SCORE": 0.97, "ODD_OR_EVEN": 0.9}
-MAX_ODDS = 6.0
+MAX_ODDS = 3.2   # chosen by Dominik 5 Oct 2026: early-season backtest +10 % ROI, 39 % hits
 # Backtest vs. closing odds 2025/26 (hockey.market_bt, 8 leagues): model picks made money only while teams
 # had played <= 10 games (+15 % ROI, 381 bets); later the market is better and picks lost ~5-8 %.
 EARLY_GAMES = 10
