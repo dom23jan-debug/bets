@@ -53,6 +53,9 @@ full workflow below — no further questions needed unless a decision is genuine
 ## Maintenance (only when asked or monthly)
 - `python3 -m hockey.tune <league ...>` re-tunes hyper-parameters (walk-forward backtest, ~5 min
   per league) → `data/params.json`. Liiga and Maxa use defaults until tuned.
+- `python3 -m hockey.odds_hist [league ...] [--season current]` downloads closing odds of finished games
+  (`data/odds/`), `python3 -m hockey.market_bt [league ...] --out <file.csv.gz>` backtests model picks
+  against them (one row per priced selection with payout) → check which markets / odds bands / phases pay.
 - New league: add to `hockey/leagues.py` (Livesport path), run tune, add a `hockey-<key>` skill.
 
 ## Layout

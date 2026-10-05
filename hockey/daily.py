@@ -16,6 +16,9 @@ from .scan import analyse
 PREFERRED = {"HOME_DRAW_AWAY": 1.0, "ASIAN_HANDICAP": 1.0, "OVER_UNDER": 1.0, "DRAW_NO_BET": 1.0,
              "HOME_AWAY": 1.0, "DOUBLE_CHANCE": 0.98, "BOTH_TEAMS_TO_SCORE": 0.97, "ODD_OR_EVEN": 0.9}
 MAX_ODDS = 6.0
+# Backtest vs. closing odds 2025/26 (hockey.market_bt, 8 leagues): model picks made money only while teams
+# had played <= 10 games (+15 % ROI, 381 bets); later the market is better and picks lost ~5-8 %.
+EARLY_GAMES = 10
 
 
 def best_per_match(picks):
@@ -42,7 +45,8 @@ def main():
             picks += analyse(lg, date)
         except Exception as exc:  # one broken league must not stop the others
             print(f"\n## {lg}: chyba {exc!r}")
-    ticket = best_per_match(picks)
+    late = [p for p in picks if p.get("n_games", 0) > EARLY_GAMES]
+    ticket = best_per_match([p for p in picks if p.get("n_games", 0) <= EARLY_GAMES])
     print(f"\n## Tiket {date} (1 sázka na zápas, kurz ≤ {MAX_ODDS:g}) — před doporučením ověř každý tip (viz CLAUDE.md)")
     for p in ticket:
         print(f"  {p['start']} [{p['league']}] {p['game']:32} {p['label']:46} @ {p['odds']:.2f} {p['book']:12}"
@@ -50,6 +54,10 @@ def main():
               f" | model {100*p['p_model']:.1f} % trh {100*p['p_market']:.1f} %")
     if not ticket:
         print("  žádná value")
+    if late:
+        games = sorted({p["game"] for p in late})
+        print(f"\n  Mimo tiket (týmy už mají > {EARLY_GAMES} zápasů, kdy model v backtestu proti trhu prodělával): "
+              + ", ".join(games))
 
 
 if __name__ == "__main__":

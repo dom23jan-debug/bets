@@ -54,6 +54,12 @@ with ¼-Kelly stakes (0.5–3 % bankroll). Be honest: if nothing has value, say 
 | tiposextraliga.sk | does not resolve | league renamed (Tipsport liga) |
 
 ## Interpretation rules learned so far
+- Backtest vs. real closing odds 2025/26 (`hockey.market_bt`, 8 leagues, 2 888 games, checked 5 Oct 2026):
+  market 1X2 log-loss 1.0038 vs model 1.0119 (optimal blend w ≈ 0.1). Current rule (EV ≥ 1.03, best per
+  match) ≈ +1 % ROI over 1 534 bets, but **all of it early season**: teams ≤ 10 games +15 % (381 bets,
+  6 of 8 leagues positive), later −5 to −8 % whatever w/EV threshold → `hockey.daily` keeps those
+  off the ticket (`EARLY_GAMES`). Odds-only outliers (best odds ≥ 1.03 × fair, no model) lost −15 %;
+  totals −4 %; "safe" favourites at odds 1.3–2.0 ≈ break-even before nothing (−4 to +2 %).
 - Hockey 1X2 is noisy: a good model beats league base rates by only ~0.5 % log-loss; the market is
   usually better → keep w_model ≤ 0.5 and treat large disagreements with suspicion.
 - Team-specific totals are mostly noise; the league mean is a strong prior (`total_k`).

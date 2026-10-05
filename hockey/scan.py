@@ -3,6 +3,7 @@
 Usage: python3 -m hockey.scan shl 2026-10-01 [--all]
   --all  print every priced selection, not only those with EV >= 1.03
 """
+import collections
 import datetime
 import math
 import sys
@@ -45,6 +46,7 @@ def analyse(key, date, show_all=False, out=print):
         + " / ".join(f"{100*s:.0f} %" for s in prof["period_share"])
         + f", remízy po 60 min {100*prof['tie_60']:.1f} %, vedoucí po 2. třetině nevyhraje v 60 min "
         f"{100*prof['lead_after_2_lost']:.0f} %, domácí v prodl./SN {100*prof['ot_home']:.0f} %")
+    played = collections.Counter(t for m in matches if m.get("season") == "current" for t in (m["home"], m["away"]))
     picks = []
     for g in sorted(games, key=lambda e: e["start"]):
         lh, la = ratings.expected_goals(g["home"], g["away"])
@@ -75,7 +77,8 @@ def analyse(key, date, show_all=False, out=print):
                 f" | value od {o['min_odds']:.2f} | ¼K {100*stake:.1f} %")
             if o["ev"] >= EV_MIN:
                 picks.append(dict(o, league=key, game=f"{g['home']} – {g['away']}", start=start,
-                                  label=label(o["key"], g["home"], g["away"]), stake=stake))
+                                  label=label(o["key"], g["home"], g["away"]), stake=stake,
+                                  n_games=min(played[g["home"]], played[g["away"]])))
         if not shown:
             out("  bez value")
     return picks
