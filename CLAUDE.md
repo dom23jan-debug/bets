@@ -22,7 +22,7 @@ full workflow below — no further questions needed unless a decision is genuine
      finishing luck). For SHL use own xG (`data/shl.json` h_xg/a_xg, rebuild `python3 -m hockey.shl_xg`)
      to separate luck from quality. Reject when the underlying numbers contradict the model.
    - one bet per match, prefer lower variance (handicap +1.5 / DNB) when EV is similar;
-   - bookmaker-only outliers (value only at one book) are fine but name the book;
+   - bookmaker-only outliers (value only at one book, model alone not above market) → reject: they lost −15 % in the 2025/26 backtest;
    - early season (< 10 games per team): half of ¼ Kelly, floor 0.5 %, cap 3 %.
 5. **Answer** (Czech, concise): ticket table — time, match, bet, odds + bookmaker, EV, „value od"
    (minimum odds), stake % — plus one line „proč" per bet, then rejected candidates in one line each.
