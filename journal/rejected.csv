@@ -1,0 +1,41 @@
+date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,result,profit_pct,reason_cat,reason,score_60,odds_source
+2026-10-01,shl,Skellefteå – Malmö,1X2 (60 min),Malmö,Betano,5.50,0.5,1.071,5.50,loss,-0.5,jen 1 sázkovka + čísla proti,"value jen u Betana, Skellefteå nejlepší xG v lize",3:3,vlákno
+2026-10-01,shl,IF Bjorkloven – Växjö,1X2 (60 min),IF Bjorkloven,Chance,3.00,0.5,1.003,3.44,win,1.0,čísla proti modelu,Björklöven xG 9.0:14.3,4:2,vlákno
+2026-10-01,elh,Sparta Praha – České Budějovice,1X2 (60 min),České Budějovice,Betano,5.10,0.5,0.999,5.50,loss,-0.5,malý vklad / hraniční EV,vklad by vyšel pod 0.5 %,4:2,vlákno
+2026-10-02,elh,Pardubice – Plzeň,1X2 (60 min),Plzeň,Tipsport,5.10,1.0,1.338,4.69,loss,-1.0,trh proti (pohyb kurzu),"rozdíl 15 pp, kurz se posouval proti Plzni",4:2,vlákno
+2026-10-02,del,Krefeld – Ingolstadt,1X2 (60 min),Krefeld,Tipsport,2.34,0.5,1.042,,win,0.67,nováček / málo dat,Krefeld nováček DEL po 4 zápasech,3:1,zavírací
+2026-10-02,del,Straubing – Bremerhaven,1X2 (60 min),Bremerhaven,Tipsport,3.54,0.5,1.090,,loss,-0.5,"kontext (H2H, zranění)","Straubing 4/4 H2H, Bremerhaven bez brankáře Gudlevskise",4:3,zavírací
+2026-10-02,fr,Briancon – Grenoble,1X2 (60 min),Briancon,Fortuna,5.60,0.75,1.233,,loss,-0.75,štěstí (zákroky/proměňování),Briancon žije z 94% zákroků,1:3,zavírací
+2026-10-02,fr,Nice – Rouen,1X2 (60 min),Nice,Fortuna,4.20,0.5,1.138,,loss,-0.5,štěstí (zákroky/proměňování),Nice žije z 15.5% proměňování,0:5,zavírací
+2026-10-02,elh,Kometa Brno – Mladá Boleslav,1X2 (60 min),Mladá Boleslav,Betano,4.10,0.5,1.134,,loss,-0.5,čísla proti modelu,Boleslav nejhorší čísla v lize,2:2,zavírací
+2026-10-02,del,Norimberk – Schwenninger,Handicap (60 min),Norimberk -2.5,Chance,3.92,0.5,1.081,,win,1.46,štěstí (zákroky/proměňování),"48 % střel, 92.8 % zákroků, 15 % proměňování",5:0,zavírací
+2026-10-02,elh,Třinec – Litvínov,1X2 (60 min),Litvínov,Fortuna,5.00,0.5,1.030,5.30,loss,-0.5,čísla proti modelu,"Litvínov loni nejhorší, 6 zápasů je málo",3:2,vlákno
+2026-10-02,nl,Kloten – Fribourg,Počet gólů (60 min),Méně než 3.5,Chance,4.30,0.5,1.068,,loss,-0.5,totaly (bez edge),"under v NL, liga 6 gólů na zápas",1:4,zavírací
+2026-10-02,liiga,Tappara – Jokerit,Počet gólů (vč. prodl.),Méně než 3.5,Fortuna,4.40,0.5,1.062,,loss,-0.5,totaly (bez edge),"under v Liize, xG nepotvrzuje",2:2,zavírací
+2026-10-02,nhl,Vegas – Anaheim,1X2 (60 min),Anaheim,Betano,3.85,0.5,,3.85,win,1.425,jen 1 sázkovka + sestava,"value jen u Betana, Anaheimu chybí Terry",3:4,vlákno
+2026-10-03,shl,Timra – Skellefteå,1X2 (60 min),Timra,Tipsport,4.35,1.0,1.240,3.67,loss,-1.0,čísla proti modelu,Skellefteå nejlepší xG v lize,1:4,vlákno
+2026-10-03,shl,Malmö – Brynäs,1X2 (60 min),Malmö,Betano,3.12,0.5,1.103,3.10,win,1.06,čísla proti modelu,"model ze 4 zápasů, loni Malmö xG horší",1:0,vlákno
+2026-10-03,shl,Frölunda – Djurgården,1X2 (60 min),Djurgården,Fortuna,4.40,0.5,1.033,,loss,-0.5,čísla proti modelu,Djurgården loni nejhorší xG,4:2,zavírací
+2026-10-03,liiga,Ilves – Kiekko-Espoo,1X2 (60 min),Kiekko-Espoo,Betano,3.75,0.5,1.049,3.80,loss,-0.5,kontext (únava),"K-Espoo hrálo den předtím, EV po korekci ~1.04",6:4,vlákno
+2026-10-03,liiga,KooKoo – Pelicans,1X2 (60 min),KooKoo,Betano,2.70,0.5,1.045,,loss,-0.5,čísla proti modelu,oficiální xG Liigy ukazuje opačně,3:6,zavírací
+2026-10-03,liiga,TPS Turku – JYP,1X2 (60 min),JYP,Betano,3.15,0.5,1.079,,loss,-0.5,čísla proti modelu,oficiální xG Liigy ukazuje opačně,4:1,zavírací
+2026-10-03,maxa,Litoměřice – Jihlava,1X2 (60 min),Litoměřice,Fortuna,2.60,0.5,1.054,,loss,-0.5,čísla proti modelu,"Jihlava loni nejlepší, letos jen smůla",2:3,zavírací
+2026-10-03,maxa,Třebíč – Pardubice B,1X2 (60 min),Pardubice B,Fortuna,3.25,0.5,1.071,,loss,-0.5,nováček / málo dat,sestava B-týmu nejde ověřit,4:1,zavírací
+2026-10-03,sk,Košice – Michalovce,Vítěz (vč. prodl.),Michalovce,Chance,3.39,0.5,1.094,,loss,-0.5,malý vklad / hraniční EV,vklad by vyšel pod 0.5 %,6:3,zavírací
+2026-10-03,nl,Curych – Lausanne,Vítěz (vč. prodl.),Lausanne,Fortuna,3.60,0.5,1.085,,loss,-0.5,malý vklad / hraniční EV,vklad by vyšel pod 0.5 %,2:2,zavírací
+2026-10-03,liiga,SaiPa – Jokerit,Počet gólů (60 min),Méně než 3.5,Tipsport,4.95,0.5,1.123,,loss,-0.5,totaly (bez edge),"totaly bez edge, xG výhoda max 1–5 %",3:2,zavírací
+2026-10-03,liiga,Lukko – Ässät,Počet gólů (60 min),Méně než 3.5,Chance,4.03,0.5,1.049,,loss,-0.5,totaly (bez edge),"totaly bez edge, xG výhoda max 1–5 %",2:5,zavírací
+2026-10-03,liiga,Sport – IFK Helsinki,Počet gólů (60 min),Méně než 4.5,Tipsport,2.34,0.5,,,win,0.67,totaly (bez edge),"totaly bez edge, xG výhoda max 1–5 %",2:2,zavírací
+2026-10-03,liiga,TPS Turku – JYP,Počet gólů (60 min),Méně než 4.5,Tipsport,2.36,0.5,,,loss,-0.5,totaly (bez edge),"totaly bez edge, xG výhoda max 1–5 %",4:1,zavírací
+2026-10-03,nl,Langnau – Kloten,Počet gólů (60 min),Méně než 4.5,Tipsport,2.89,0.5,,,loss,-0.5,totaly (bez edge),NL přes 6 gólů na zápas,6:2,zavírací
+2026-10-03,maxa,Havířov – Zlín,Počet gólů (60 min),Méně než 5,Tipsport,1.87,0.5,,,loss,-0.5,totaly (bez edge),data si odporují,4:2,zavírací
+2026-10-03,nhl,Colorado – St. Louis,Handicap (60 min),St. Louis +1.5,Betano,2.02,0.5,,1.98,loss,-0.5,NHL brankáři nepotvrzeni,"předběžně, nikdy nepřepočteno",6:1,vlákno
+2026-10-04,del,Eisbären Berlín – Norimberk,1X2 (60 min),Norimberk,Betano,4.85,0.75,1.195,,loss,-0.75,štěstí (zákroky/proměňování),forma stojí na 94% zákrocích,4:1,zavírací
+2026-10-04,del,Schwenninger – Straubing,Handicap (60 min),Straubing -1.5,Betano,3.05,0.5,1.087,,win,1.025,jen 1 sázkovka + čísla proti,"value jen u Betana, Schwenningen jen smůla",2:4,zavírací
+2026-10-04,del,Iserlohn – Krefeld,Handicap (60 min),Krefeld -1.5,Betano,2.87,0.5,1.056,,loss,-0.5,jen 1 sázkovka + čísla proti,"value jen u Betana, Krefeld nováček",3:2,zavírací
+2026-10-04,fr,Rouen – Anglet,Handicap (60 min),Anglet +2.5,Betano,2.15,0.5,1.045,,loss,-0.5,čísla proti modelu,podle střel horší než soupeř,5:2,zavírací
+2026-10-04,fr,Grenoble – Marseille,Vítěz (vč. prodl.),Marseille,Tipsport,4.43,0.5,1.137,,win,1.715,čísla proti modelu,podle střel horší než soupeř,4:4,zavírací
+2026-10-04,sk,Prešov – Trenčín,1X2 (60 min),Prešov,Chance,4.31,0.5,1.092,,loss,-0.5,čísla proti modelu,podle střel horší než soupeř,2:3,zavírací
+2026-10-04,elh,Olomouc – Třinec,1X2 (60 min),Olomouc,Betano,4.05,0.5,1.062,,loss,-0.5,čísla proti modelu,podle střel horší než soupeř,0:9,zavírací
+2026-10-04,elh,Karlovy Vary – Plzeň,1X2 (60 min),Plzeň,Tipsport,2.41,0.5,,,loss,-0.5,malý vklad / hraniční EV,EV jen 1.059,4:1,zavírací
+2026-10-04,nhl,Anaheim – Florida,Handicap (60 min),Anaheim -2.5,Betano,5.41,0.5,,5.50,loss,-0.5,malý vklad / hraniční EV,"vysoký rozptyl, EV výhry jen 1.049",2:2,vlákno
