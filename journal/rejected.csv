@@ -39,7 +39,14 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-04,elh,Olomouc – Třinec,1X2 (60 min),Olomouc,Betano,4.05,0.5,1.062,,loss,-0.5,čísla proti modelu,podle střel horší než soupeř,0:9,zavírací
 2026-10-04,elh,Karlovy Vary – Plzeň,1X2 (60 min),Plzeň,Tipsport,2.41,0.5,,,loss,-0.5,malý vklad / hraniční EV,EV jen 1.059,4:1,zavírací
 2026-10-04,nhl,Anaheim – Florida,Handicap (60 min),Anaheim -2.5,Betano,5.41,0.5,,5.50,loss,-0.5,malý vklad / hraniční EV,"vysoký rozptyl, EV výhry jen 1.049",2:2,vlákno
-2026-10-05,nhl,Tampa Bay – Philadelphia,Dvojitá šance (60 min),X2,Tipsport,2.06,0.5,1.036,,open,,malý vklad / hraniční EV,"EV jen 1.036, value jen u Tipsportu/Chance (Fortuna 1.91, Betano 1.88), brankáři nepotvrzeni",,vlákno
-2026-10-05,nhl,Tampa Bay – Philadelphia,1X2 (60 min),X,Tipsport,4.32,0.5,1.035,,open,,malý vklad / hraniční EV,"EV jen 1.035, kurz nad 3.2",,vlákno
-2026-10-05,nhl,Tampa Bay – Philadelphia,Handicap (60 min),Philadelphia +1,Chance,1.91,0.5,1.038,,open,,model vs trh,"model o ~8.6 pb nad trhem bez důvodu; PHI 0-1-2, skóre 4:13, Vasilevskiy v bráně",,vlákno
-2026-10-05,nhl,Boston – Ottawa,Obě dají gól (1. třetina),ANO,Betano,3.20,0.5,1.056,,open,,jen 1 sázkovka,"model ≈ trh (1.057 vs 1.056), value jen u Betana",,vlákno
+2026-10-05,nhl,Tampa Bay – Philadelphia,Dvojitá šance (60 min),X2,Tipsport,2.06,0.5,1.036,,loss,-0.5,malý vklad / hraniční EV,"EV jen 1.036, value jen u Tipsportu/Chance (Fortuna 1.91, Betano 1.88), brankáři nepotvrzeni",,vlákno
+2026-10-05,nhl,Tampa Bay – Philadelphia,1X2 (60 min),X,Tipsport,4.32,0.5,1.035,,loss,-0.5,malý vklad / hraniční EV,"EV jen 1.035, kurz nad 3.2",,vlákno
+2026-10-05,nhl,Tampa Bay – Philadelphia,Handicap (60 min),Philadelphia +1,Chance,1.91,0.5,1.038,,loss,-0.5,model vs trh,"model o ~8.6 pb nad trhem bez důvodu; PHI 0-1-2, skóre 4:13, Vasilevskiy v bráně",,vlákno
+2026-10-05,nhl,Boston – Ottawa,Obě dají gól (1. třetina),ANO,Betano,3.20,0.5,1.056,,loss,-0.5,jen 1 sázkovka,"model ≈ trh (1.057 vs 1.056), value jen u Betana",,vlákno
+2026-10-06,nhl,Toronto – Nashville,1X2 (60 min),Nashville,Chance,3.12,0.5,1.057,,open,,1 sázka na zápas,"stejný zápas, zvolena nižší varianta DNB",,vlákno
+2026-10-06,nhl,Toronto – Nashville,Počet gólů (60 min),Více než 8.5,Fortuna,6.20,0.5,1.041,,open,,totals,model na totals nemá edge; kurz nad 3.2,,vlákno
+2026-10-06,nhl,Detroit – Ottawa,Handicap (60 min),Detroit -1.5,Betano,3.55,0.5,1.076,,open,,kurz nad 3.2,"kurz nad limitem 3.2; trh ≈ férový (1.005), jen Betano",,vlákno
+2026-10-06,nhl,NY Rangers – NY Islanders,1X2 (60 min),X,Fortuna,4.20,0.5,1.045,,open,,kurz nad 3.2,remíza nad limitem kurzu 3.2,,vlákno
+2026-10-06,nhl,Chicago – St. Louis,1X2 (60 min),X,Fortuna,4.20,0.5,1.031,,open,,malý vklad / hraniční EV,"EV jen 1.031, kurz nad 3.2, brankáři neznámí",,vlákno
+2026-10-06,nhl,Seattle – Vegas,Handicap (60 min),Seattle -2.5,Tipsport,6.85,0.5,1.047,,open,,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
+2026-10-06,nhl,Los Angeles – Florida,Handicap (60 min),Los Angeles -2.5,Chance,5.30,0.5,1.074,,open,,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
