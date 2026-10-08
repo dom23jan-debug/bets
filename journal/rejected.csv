@@ -43,10 +43,10 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-05,nhl,Tampa Bay – Philadelphia,1X2 (60 min),X,Tipsport,4.32,0.5,1.035,,loss,-0.5,malý vklad / hraniční EV,"EV jen 1.035, kurz nad 3.2",,vlákno
 2026-10-05,nhl,Tampa Bay – Philadelphia,Handicap (60 min),Philadelphia +1,Chance,1.91,0.5,1.038,,loss,-0.5,model vs trh,"model o ~8.6 pb nad trhem bez důvodu; PHI 0-1-2, skóre 4:13, Vasilevskiy v bráně",,vlákno
 2026-10-05,nhl,Boston – Ottawa,Obě dají gól (1. třetina),ANO,Betano,3.20,0.5,1.056,,loss,-0.5,jen 1 sázkovka,"model ≈ trh (1.057 vs 1.056), value jen u Betana",,vlákno
-2026-10-06,nhl,Toronto – Nashville,1X2 (60 min),Nashville,Chance,3.12,0.5,1.057,,open,,1 sázka na zápas,"stejný zápas, zvolena nižší varianta DNB",,vlákno
-2026-10-06,nhl,Toronto – Nashville,Počet gólů (60 min),Více než 8.5,Fortuna,6.20,0.5,1.041,,open,,totals,model na totals nemá edge; kurz nad 3.2,,vlákno
-2026-10-06,nhl,Detroit – Ottawa,Handicap (60 min),Detroit -1.5,Betano,3.55,0.5,1.076,,open,,kurz nad 3.2,"kurz nad limitem 3.2; trh ≈ férový (1.005), jen Betano",,vlákno
-2026-10-06,nhl,NY Rangers – NY Islanders,1X2 (60 min),X,Fortuna,4.20,0.5,1.045,,open,,kurz nad 3.2,remíza nad limitem kurzu 3.2,,vlákno
-2026-10-06,nhl,Chicago – St. Louis,1X2 (60 min),X,Fortuna,4.20,0.5,1.031,,open,,malý vklad / hraniční EV,"EV jen 1.031, kurz nad 3.2, brankáři neznámí",,vlákno
-2026-10-06,nhl,Seattle – Vegas,Handicap (60 min),Seattle -2.5,Tipsport,6.85,0.5,1.047,,open,,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
-2026-10-06,nhl,Los Angeles – Florida,Handicap (60 min),Los Angeles -2.5,Chance,5.30,0.5,1.074,,open,,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
+2026-10-06,nhl,Toronto – Nashville,1X2 (60 min),Nashville,Chance,3.12,0.5,1.057,,loss,-0.5,1 sázka na zápas,"stejný zápas, zvolena nižší varianta DNB",,vlákno
+2026-10-06,nhl,Toronto – Nashville,Počet gólů (60 min),Více než 8.5,Fortuna,6.20,0.5,1.041,,loss,-0.5,totals,model na totals nemá edge; kurz nad 3.2,,vlákno
+2026-10-06,nhl,Detroit – Ottawa,Handicap (60 min),Detroit -1.5,Betano,3.55,0.5,1.076,,win,1.27,kurz nad 3.2,"kurz nad limitem 3.2; trh ≈ férový (1.005), jen Betano",,vlákno
+2026-10-06,nhl,NY Rangers – NY Islanders,1X2 (60 min),X,Fortuna,4.20,0.5,1.045,,loss,-0.5,kurz nad 3.2,remíza nad limitem kurzu 3.2,,vlákno
+2026-10-06,nhl,Chicago – St. Louis,1X2 (60 min),X,Fortuna,4.20,0.5,1.031,,loss,-0.5,malý vklad / hraniční EV,"EV jen 1.031, kurz nad 3.2, brankáři neznámí",,vlákno
+2026-10-06,nhl,Seattle – Vegas,Handicap (60 min),Seattle -2.5,Tipsport,6.85,0.5,1.047,,loss,-0.5,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
+2026-10-06,nhl,Los Angeles – Florida,Handicap (60 min),Los Angeles -2.5,Chance,5.30,0.5,1.074,,loss,-0.5,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2",,vlákno
