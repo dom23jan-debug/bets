@@ -19,7 +19,7 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-04,maxa,Havířov – Vsetín,Počet gólů 60 min,Méně než 5,Tipsport,2.28,1.0,1.129,2.28,loss,-1.0
 2026-10-04,nhl,Vancouver – Vegas,Dvojitá šance 60 min,1X,Chance,2.35,0.5,1.071,2.39,loss,-0.5
 2026-10-06,nhl,Toronto – Nashville,Sázka bez remízy 60 min,Nashville,Chance,2.37,0.5,1.039,,push,0
-2026-10-08,maxa,Chomutov – Tábor,Sázka bez remízy 60 min,Tábor,Fortuna,2.00,1.0,1.086,,open,
-2026-10-08,shl,Timrå – Frölunda,Sázka bez remízy 60 min,Timrå,Tipsport,2.62,0.8,1.113,,open,
-2026-10-08,shl,Luleå – Malmö,Sázka bez remízy 60 min,Malmö,Fortuna,2.70,0.7,1.098,,open,
-2026-10-08,liiga,SaiPa – JYP,Počet gólů vč. prodl.,Méně než 5.5,Betano,1.98,0.5,1.034,,open,
+2026-10-08,maxa,Chomutov – Tábor,Sázka bez remízy 60 min,Tábor,Fortuna,2.00,1.0,1.086,1.83,push,0
+2026-10-08,shl,Timrå – Frölunda,Sázka bez remízy 60 min,Timrå,Tipsport,2.62,0.8,1.113,2.21,win,1.30
+2026-10-08,shl,Luleå – Malmö,Sázka bez remízy 60 min,Malmö,Fortuna,2.70,0.7,1.098,2.85,win,1.19
+2026-10-08,liiga,SaiPa – JYP,Počet gólů vč. prodl.,Méně než 5.5,Betano,1.98,0.5,1.034,1.83,win,0.49
