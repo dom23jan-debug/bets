@@ -59,3 +59,7 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-08,nhl,Calgary – Colorado,Vítěz vč. prodl.,Calgary,Chance,2.92,0.5,1.044,,open,,malý vklad / hraniční EV,"COL hraje 2. den po sobě, ale trh 0.961 a brankáři nepotvrzeni",,livesport
 2026-10-08,nhl,Ottawa – Philadelphia,1X2 (60 min),X,Fortuna,4.20,0.5,1.032,,open,,kurz nad 3.2,"remíza nad limitem kurzu, trh 0.988",,livesport
 2026-10-08,nhl,St. Louis – San Jose,Handicap (60 min),San Jose -2.5,Chance,6.31,0.5,1.052,,open,,kurz nad 3.2,"vysoký rozptyl, kurz nad 3.2, brankáři neznámí",,livesport
+2026-10-08,nhl,Ottawa – Philadelphia,Dvojitá šance (60 min),X2,Tipsport,1.90,0.5,1.036,,open,,malý vklad / hraniční EV,"EV jen 1.036, trh 0.988 (večerní sken)",,livesport
+2026-10-08,nhl,NY Islanders – Chicago,1X2 (60 min),X,Fortuna,4.40,0.5,1.059,,open,,kurz nad 3.2,remíza nad limitem kurzu (večerní sken),,livesport
+2026-10-08,nhl,Calgary – Colorado,Počet gólů (60 min),Méně než 4.5,Fortuna,3.35,0.5,1.032,,open,,totals,"model na totals nemá edge, kurz nad 3.2",,livesport
+2026-10-08,nhl,St. Louis – San Jose,Vítěz vč. prodl.,San Jose,Chance,2.30,0.5,1.031,,open,,malý vklad / hraniční EV,"brankáři neznámí, trh 0.965, value jen Chance",,livesport
