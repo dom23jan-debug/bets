@@ -63,3 +63,16 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-08,nhl,NY Islanders – Chicago,1X2 (60 min),X,Fortuna,4.40,0.5,1.059,,loss,-0.50,kurz nad 3.2,remíza nad limitem kurzu (večerní sken),,livesport
 2026-10-08,nhl,Calgary – Colorado,Počet gólů (60 min),Méně než 4.5,Fortuna,3.35,0.5,1.032,,loss,-0.50,totals,"model na totals nemá edge, kurz nad 3.2",,livesport
 2026-10-08,nhl,St. Louis – San Jose,Vítěz vč. prodl.,San Jose,Chance,2.30,0.5,1.031,,win,0.65,malý vklad / hraniční EV,"brankáři neznámí, trh 0.965, value jen Chance",,livesport
+2026-10-09,elh,Vítkovice – Pardubice,Vítěz vč. prodl.,Vítkovice,Chance,3.02,0.5,1.083,,open,,čísla proti modelu,"model +9 pp, ale Pardubice 56 % střel a 7 výher z 9, Vítkovice 48 % střel",,livesport
+2026-10-09,fr,Nice – Angers,Vítěz vč. prodl.,Nice,Fortuna,2.65,0.5,1.069,,open,,velký rozdíl bez důvodu,"model +10 pp, střely ani forma Nice nepodporují (Angers 52 % střel)",,livesport
+2026-10-09,sk,Spišská N. Ves – Prešov,Dvojitá šance (60 min),X2,Chance,3.18,0.5,1.059,,open,,čísla proti modelu,"Prešov 0 z 8, jen 41 % střel",,livesport
+2026-10-09,sk,Trenčín – Nitra,1X2 (1. třetina),Nitra,Betano,3.00,0.5,1.060,,open,,čísla proti modelu,"Nitra 2 výhry z 8, třetinový trh s velkým rozptylem",,livesport
+2026-10-09,elh,Třinec – Mountfield HK,Vítěz vč. prodl.,Mountfield HK,Chance,3.01,0.5,1.042,,open,,čísla proti modelu,"Třinec 8 z 8, 55 % střel",,livesport
+2026-10-09,elh,Liberec – Karlovy Vary,Počet gólů (60 min),Více než 5.5,Betano,2.57,0.5,1.039,,open,,totals,model na totals nemá edge,,livesport
+2026-10-09,fr,Briancon – Amiens,Počet gólů (60 min),Více než 6,Chance,2.98,0.5,1.056,,open,,totals,model na totals nemá edge,,livesport
+2026-10-09,nl,Davos – Kloten,Dvojitá šance (60 min),X2,Chance,2.78,0.5,1.036,,open,,outlier jedné sázkovky,"model 37.0 % = trh 37.4 %, value jen u Chance",,livesport
+2026-10-09,nhl,Detroit – Seattle,Počet gólů (60 min),Méně než 5.5,Betano,2.22,0.5,1.036,,open,,totals,"model na totals nemá edge, brankáři nepotvrzeni",,livesport
+2026-10-09,liiga,Kiekko-Espoo – JYP,1X2 (60 min),JYP,Tipsport,3.24,0.5,1.034,,open,,kurz nad 3.2,"kurz nad limitem, hraniční EV",,livesport
+2026-10-09,liiga,KooKoo – Jukurit,1X2 (60 min),Jukurit,Veikkaus,3.55,0.5,1.435,,open,,modely se neshodují,"xG model 40 %, hlavní model 32 % ≈ trh; kurz nad 3.2",,liiga_value
+2026-10-09,liiga,Ässät – Hämeenlinna,1X2 (60 min),Ässät,Veikkaus,1.92,0.5,1.270,,open,,modely se neshodují,"xG model 66 %, hlavní model 53 % vs trh 50 %, u CZ sázkovek bez value",,liiga_value
+2026-10-09,liiga,Pelicans – Kärpät,1X2 (60 min),Pelicans,Veikkaus,2.22,0.5,1.169,,open,,modely se neshodují,"xG model 53 %, hlavní model 41 % pod trhem 43 %",,liiga_value
