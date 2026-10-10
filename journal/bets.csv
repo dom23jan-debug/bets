@@ -25,6 +25,9 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-08,liiga,SaiPa – JYP,Počet gólů vč. prodl.,Méně než 5.5,Betano,1.98,0.5,1.034,1.83,win,0.49
 2026-10-08,nhl,Calgary – Colorado,Dvojitá šance 60 min,1X,Tipsport,2.18,0.7,1.069,,loss,-0.70
 2026-10-08,nhl,Carolina – Vancouver,Dvojitá šance 60 min,X2,Tipsport,2.65,0.5,1.067,,loss,-0.50
-2026-10-09,del,Kolín n. R. – Schwenninger,Handicap 60 min,Schwenninger +1.5,Chance,2.30,1.1,1.116,,open,
-2026-10-09,sk,B. Bystrica – Slovan Bratislava,Vítěz vč. prodl.,B. Bystrica,Chance,2.37,0.5,1.048,,open,
-2026-10-09,nl,Lugano – Curych,Vítěz vč. prodl.,Lugano,Fortuna,2.43,0.5,1.046,,open,
+2026-10-09,del,Kolín n. R. – Schwenninger,Handicap 60 min,Schwenninger +1.5,Chance,2.30,1.1,1.116,2.16,win,1.43
+2026-10-09,sk,B. Bystrica – Slovan Bratislava,Vítěz vč. prodl.,B. Bystrica,Chance,2.37,0.5,1.048,2.37,loss,-0.50
+2026-10-09,nl,Lugano – Curych,Vítěz vč. prodl.,Lugano,Fortuna,2.43,0.5,1.046,2.18,loss,-0.50
+2026-10-10,shl,Luleå – Timrå,Sázka bez remízy 60 min,Timrå,Tipsport,2.87,1.0,1.144,,open,
+2026-10-10,shl,Färjestad – Malmö,Handicap 60 min,Malmö +1.5,Tipsport,1.92,0.6,1.044,,open,
+2026-10-10,liiga,Tappara – TPS Turku,Sázka bez remízy 60 min,TPS Turku,Chance,2.62,0.5,1.031,,open,
