@@ -74,8 +74,8 @@ efficient in betting - most matches are "bez value"; say "dnes nesázet" when no
 ## Rules for candidates (implemented in `scan.tier`)
 | Tier | Condition | Stake (¼ Kelly from EV vs trh) | Evidence |
 |---|---|---|---|
-| **A** | direct consensus (≥ 3 international books, same market + line), full-time 1X2 / DC / DNB / AH / totals / BTTS, EV trh ≥ 1.02, EV model ≥ 1.0, odds 1.5-3.2; outside `EARLY_OK` leagues only ≤ 3 h before kick-off | floor 0.5 %, cap 2 % | 2025/26 first divisions: +7.7 % at opening prices (1 138 bets), +21.6 % at closing (148) |
-| **AP** | tier A edge in a second-tier / untested league more than 3 h before kick-off | not yet — re-scan ~2 h before kick-off | second tiers at opening prices −2.6 % (906 bets) |
+| **A** | direct consensus (≥ 3 international books, same market + line), full-time 1X2 / DC / DNB / AH / totals / BTTS, EV trh ≥ 1.02, EV model ≥ 1.0, odds 1.5-3.2; outside European first divisions only ≤ 3 h before kick-off | floor 0.5 %, cap 2 % | 2025/26 first divisions at opening prices: +7.8 % on 1 735 bets (out-of-sample part +8.1 %) |
+| **AP** | tier A edge in a second tier / non-European league / UEFA cup more than 3 h before kick-off | not yet — re-scan ~2 h before kick-off | second tiers at opening prices −2.6 % (906 bets) |
 | **A!** | tier A with EV trh > 1.06 | as A after checks | re-check the price, team news, lineups; gaps that big are often stale |
 | **B** | direct consensus, other goal markets (1st / 2nd half, European handicap, HT/FT ...), EV trh ≥ 1.04, EV model ≥ 1.0, odds ≤ 3.2 | 0.5 % | weak evidence (half totals EV ≥ 1.04: +7 % on 132 bets, below that −2 %) |
 | **C** | match totals of corners / yellow cards at Fortuna vs the bet365 line (Sofascore), EV trh ≥ 1.05, EV model ≥ 1.0, odds ≤ 3.2 | 0.5 % | experimental, no historical Fortuna prices → track in the journal |
@@ -103,21 +103,23 @@ efficient in betting - most matches are "bez value"; say "dnes nesázet" when no
 - Check the price at the Czech book right before betting; football lines move fast after team news.
 
 ## Backtest results (season 2025/26, walk-forward weekly refits, real Czech prices from Livesport)
-Run 14 Oct 2026 on 14 leagues (eng1, eng2, esp1, esp2, ita1, ita2, ger1, ger2, fra1, fra2, ned1, por1,
-bel1, cze1; `odds_hist` → `market_bt` → `bt_report`). Consensus = SE + KR + GB books, Czech books excluded.
+Run 14 Oct 2026 on 24 leagues (`odds_hist` → `market_bt` → `bt_report`; simulation of the exact rule). Consensus = SE + KR + GB books, Czech books excluded.
 - **Calibration** (all Czech offers, closing prices, odds ≤ 3.2, 7 leagues): ROI by EV vs consensus
   0.98-1.00 −1.0 %, 1.00-1.01 +0.2 %, 1.01-1.02 +0.9 %, 1.02-1.03 +4.0 %, 1.03-1.05 +10.8 %,
   1.05-1.08 +23 % (57 bets). Above odds 3.2 the big "edges" lost (stale long shots) → odds cap 3.2.
-- **Final rule = tier A, one bet per match** (16 leagues: + eng3, eng4):
-  | prices | league group | bets | ROI flat | note |
-  |---|---|---|---|---|
-  | opening (bet early) | first divisions (eng1 esp1 ita1 ger1 fra1 ned1 por1 bel1 cze1) | 1 138 | **+7.7 % ± 3.1** | `leagues.EARLY_OK` |
-  | opening | second tiers (eng2-4, esp2, ita2, ger2, fra2) | 906 | −2.6 % ± 3.4 | early value not real |
-  | closing (bet late) | first divisions | 148 | +21.6 % ± 9.5 | |
-  | closing | second tiers | 34 | +31.4 % ± 20 | consensus reliable near kick-off |
-  → tier A anytime in `EARLY_OK` leagues; elsewhere only within 3 h of kick-off ("AP" = re-scan later).
-  Opening prices by league: bel1 +26 %, eng1 +16 %, ned1 +10 %, ita1 +8 %, eng2 +7 %, cze1 +4 %, fra1 +4 %,
-  esp1 +2 %, por1 +2 %, ger1 +1 %, fra2 −1 %, ger2 −1 %, eng3 −3 %, eng4 −4 %, ita2 −4 %, **esp2 −15 %**.
+- **Final rule = tier A, one bet per match** (24 leagues):
+  | prices | league group | bets | ROI flat |
+  |---|---|---|---|
+  | opening (bet early) | 9 first divisions used to set the rule (eng1 esp1 ita1 ger1 fra1 ned1 por1 bel1 cze1) | 1 138 | **+7.7 % ± 3.1** |
+  | opening | 8 further first divisions, **out-of-sample** (tur1 den1 pol1 sco1 svk1 aut1 sui1 gre1) | 597 | **+8.1 % ± 4.3** |
+  | opening | 7 second tiers (eng2-4, esp2, ita2, ger2, fra2) | 906 | −2.6 % ± 3.4 |
+  | closing (bet late) | 17 first divisions | 208 | +11.2 % ± 7.8 |
+  | closing | 7 second tiers | 34 | +31 % ± 20 |
+  → tier A anytime in European first divisions (`leagues.EARLY_OK`); second tiers, non-European leagues and
+  UEFA cups only within 3 h of kick-off ("AP" = re-scan later). Opening prices by league: aut1 +21 %,
+  bel1 +26 %, eng1 +16 %, sco1 +13 %, den1 +11 %, tur1 +10 %, ned1 +10 %, pol1 +9 %, ita1 +8 %, gre1 +8 %,
+  eng2 +7 %, cze1 +4 %, fra1 +4 %, esp1 +2 %, por1 +2 %, ger1 +1 %, sui1 0 %, fra2 −1 %, ger2 −1 %,
+  eng3 −3 %, eng4 −4 %, ita2 −4 %, svk1 −6 %, **esp2 −15 %**.
 - The model filter matters: in the EV 1.015-1.06 band offers where the model agreed returned +6.5 % vs
   +0.3 % where it did not (7 leagues, closing prices).
 - **cze1** is the richest source of discrepancies (closing: 202 offers with EV ≥ 1.03 → +16 %, vs 30 in eng1).

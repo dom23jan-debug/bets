@@ -70,10 +70,13 @@ LEAGUES = {
     "uel": L("Evropská liga", "evropa/evropska-liga", "Evropská liga", 679, model_filter=False),
     "uecl": L("Konferenční liga", "evropa/konferencni-liga", "Konferenční liga", 17015, model_filter=False),
 }
-# Leagues where tier A held at opening prices too (backtest 2025/26: first divisions +7.7 % on 1 138 bets,
-# second tiers -2.6 % on 906 bets; at closing prices both positive). Elsewhere a tier-A edge counts only close
-# to kick-off (scan.LATE_HOURS), when the international consensus has formed.
-EARLY_OK = {"eng1", "esp1", "ita1", "ger1", "fra1", "ned1", "por1", "bel1", "cze1"}
+# European first divisions: tier A held at opening prices too (backtest 2025/26, one bet per match: the 9 leagues
+# used to set the rule +7.7 % on 1 138 bets, 8 further first divisions out-of-sample +8.1 % on 597 bets; second
+# tiers -2.6 % on 906 bets). Elsewhere (second tiers, non-European leagues, UEFA cups - untested) a tier-A edge
+# counts only close to kick-off (scan.LATE_HOURS), when the international consensus has formed.
+EARLY_OK = {"eng1", "esp1", "ita1", "ger1", "fra1", "ned1", "por1", "bel1", "cze1",       # set the rule
+            "tur1", "den1", "pol1", "sco1", "svk1", "aut1", "sui1", "gre1",              # out-of-sample
+            "cro1", "srb1", "rou1", "hun1", "nor1", "swe1", "fin1"}                      # first divisions, untested
 # Default scan set ("all European leagues"); the rest is scanned when asked for by name / region.
 EUROPE = [k for k in LEAGUES if k not in ("usa1", "mex1", "bra1", "arg1", "jpn1", "kor1", "aus1", "ksa1", "chn1")]
 CUPS = ("ucl", "uel", "uecl")

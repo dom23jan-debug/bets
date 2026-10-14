@@ -54,6 +54,11 @@ Refresh: `python3 -m football.profiles > /tmp/t.md` and paste below.
 | uel Evropská liga | 288 | 2.76 | 45 % | 51 % | 21 % | 53 % | 53 % | 9.3 | 4.4 | 26.0 | 24.4 | – | – |
 | uecl Konferenční liga | 216 | 2.67 | 43 % | 52 % | 22 % | 50 % | 49 % | 9.0 | 4.5 | 25.5 | 24.2 | – | – |
 
+## Timing rule by group (backtest 2025/26, see SKILL.md)
+- European first divisions (`leagues.EARLY_OK`): tier A valid whenever the scan runs (+7.8 % at opening prices).
+- Second tiers (eng2-4, esp2, ita2, ger2-3, fra2, ned2, cze2), non-European leagues and UEFA cups: tier A only
+  within 3 h of kick-off ("AP" before that) — early discrepancies there were noise (−2.6 %).
+
 ## Notes by league / group
 - **cze1 Chance Liga** — the richest source of value: Czech books deviate from the international consensus
   far more often than in big leagues (2025/26: 202 closing offers with EV ≥ 1.03 vs 30 in the EPL, ROI +16 %).

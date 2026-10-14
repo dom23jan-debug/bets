@@ -52,17 +52,25 @@ FBref lost its Opta advanced data (xG etc.) in January 2026 — only basic stats
 - Unique tournament ids: see `football/leagues.py` (`sofa`).
 
 ## Domains to add (Network access → Allowed domains; add bare domain AND `*.domain`)
-Priority 1 (sharper reference prices, long backtests, xG history, cross-league ratings):
-football-data.co.uk, pinnacle.com (guest.api.arcadia.pinnacle.com), betfair.com (ero.betfair.com),
-understat.com, clubelo.com (api.clubelo.com — HTTP only? check), fotmob.com, transfermarkt.com,
-fantasy.premierleague.com, eu-offering-api.kambicdn.com (Kambi/Unibet: corners, cards, shots markets).
-Priority 2 (more books, odds history, news): oddsportal.com, betexplorer.com, oddschecker.com, oddspedia.com,
-smarkets.com, matchbook.com, sazka.cz, synottip.cz, merkurxtip.cz, iforbet.cz, kingsbet.cz, fbref.com,
-whoscored.com, footystats.org, soccerstats.com, totalcorner.com, adamchoi.co.uk, worldfootball.net,
-soccerway.com, statz.ai, sportsgambler.com, premierinjuries.com, rotowire.com, bbc.co.uk/bbc.com, kicker.de,
-uefa.com, premierleague.com (footballapi.pulselive.com), open-meteo.com, espn.com (site.api.espn.com),
-americansocceranalysis.com, theanalyst.com.
-Priority 3 (prediction sites, only as a second opinion): forebet.com, predictz.com, windrawwin.com,
-vitibet.com, statarea.com, zulubet.com, soccervista.com, dratings.com, infogol.net, footballpredictions.com,
-betclan.com, prosoccer.gr, olbg.com, bettingexpert.com.
-API keys (optional, user must register): api-sports.io (API-Football), football-data.org, the-odds-api.com.
+Asked for on 14 Oct 2026 — when a domain becomes reachable, wire it in and update the status table above.
+- **Priority 1** (sharper reference prices, long backtests, xG history, cross-league strength, team news):
+  football-data.co.uk (results + stats + closing odds incl. Pinnacle since 1993, 38 leagues), pinnacle.com
+  (`guest.api.arcadia.pinnacle.com`, sharpest book), betfair.com (`ero.betfair.com` exchange prices),
+  understat.com (xG top-5 + RPL since 2014), clubelo.com (`api.clubelo.com`, Elo of all European clubs → UEFA
+  cups, promoted teams; check HTTPS), fotmob.com (lineups, injuries, Opta xG 100+ leagues), transfermarkt.com /
+  .de (injuries, suspensions, squad values, referees), premierleague.com (`fantasy.premierleague.com` player
+  availability), kambicdn.com (`eu-offering-api.kambicdn.com`, Kambi/Unibet: corners, cards, shots markets).
+- **Priority 2**: oddsportal.com, betexplorer.com, oddschecker.com, oddspedia.com, smarkets.com, matchbook.com,
+  polymarket.com; Czech books sazka.cz, synottip.cz, merkurxtip.cz, iforbet.cz, kingsbet.cz; stats fbref.com,
+  whoscored.com, footystats.org, soccerstats.com, totalcorner.com, adamchoi.co.uk, worldfootball.net,
+  soccerway.com, statz.ai (referees); news / lineups sportsgambler.com, premierinjuries.com, rotowire.com,
+  bbc.co.uk, bbc.com, skysports.com, kicker.de, uefa.com, pulselive.com, espn.com, americansocceranalysis.com,
+  theanalyst.com; weather open-meteo.com.
+- **Priority 3** (prediction sites / "bots" — second opinion only, none of them beats the market): forebet.com,
+  predictz.com, windrawwin.com, vitibet.com, statarea.com, zulubet.com, soccervista.com, dratings.com,
+  infogol.net, footballpredictions.com, betclan.com, prosoccer.gr, olbg.com, bettingexpert.com.
+- Not worth adding: tipsport.cz, chance.cz, betano.cz (sites return 403 to cloud IPs; their odds come via
+  Livesport anyway).
+- API keys (optional, the user registers and stores the key as an environment secret): api-sports.io
+  (API-Football: injuries, lineups, odds incl. corners/cards; free 100 requests/day), football-data.org,
+  the-odds-api.com (Pinnacle/Betfair odds; free 500 requests/month).

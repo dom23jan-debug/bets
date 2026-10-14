@@ -1956,5 +1956,54 @@
     "total_k": 0.75
    }
   ]
+ },
+ "aus1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 150,
+  "logloss_1x2": 1.0961,
+  "baseline_1x2": 1.091,
+  "logloss_ou25": 0.6841,
+  "baseline_ou25": 0.6833,
+  "gain_1x2_pct": -0.46,
+  "gain_ou25_pct": -0.12,
+  "stats_gain_pct": {
+   "cor": -0.48,
+   "yc": 0.71,
+   "cards": 0.45,
+   "sh": 1.5,
+   "sot": 1.65,
+   "fo": 1.0,
+   "off": 0.06
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
  }
 }

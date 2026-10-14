@@ -46,7 +46,7 @@ before); football when the request names football (fotbal, a football league / c
 4. **Verify** every candidate (skill `football-value`: tiers A/B/C, team news via Sofascore/Livesport missing
    players, rotation, referee for cards, price re-check). Value = Czech price above the margin-free consensus of
    ~30-60 international books; the own model must agree. Model-only statistics (shots, fouls, offsides,
-   team corners) never go on the ticket. "AP" (second tiers / untested leagues > 3 h before kick-off) =
+   team corners) never go on the ticket. "AP" (second tiers, non-European leagues, UEFA cups > 3 h before kick-off) =
    re-scan ~2 h before kick-off, not a bet yet.
 5. **Answer / journal / commit** exactly as for hockey (steps 5-7 above); football bets go to the same
    `journal/bets.csv` / `journal/rejected.csv` with their football league key.
