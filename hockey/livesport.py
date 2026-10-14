@@ -4,16 +4,16 @@ Czech bookmaker odds (Tipsport, Fortuna, Chance, Betano...).
 Hosts: www.livesport.cz, local-cz.flashscore.ninja (feeds), global.ds.lsapp.eu (odds).
 """
 import concurrent.futures as cf
-import datetime
 import json
 import os
 import re
 import urllib.request
+import zoneinfo
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36"
 SITE = "https://www.livesport.cz"
 FEED = "https://local-cz.flashscore.ninja/1/x/feed/"
-TZ = datetime.timezone(datetime.timedelta(hours=2))
+TZ = zoneinfo.ZoneInfo("Europe/Prague")   # Czech local time incl. daylight saving (was fixed UTC+2)
 CACHE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 

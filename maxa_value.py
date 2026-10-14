@@ -10,9 +10,10 @@ import math
 import re
 import sys
 import urllib.request
+import zoneinfo
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36"
-TZ = datetime.timezone(datetime.timedelta(hours=2))
+TZ = zoneinfo.ZoneInfo("Europe/Prague")
 
 # Preseason prior: goal difference per game, from title/relegation odds and roster quality.
 PRIOR = {"Jihlava": .5, "Zlín": .5, "Vsetín": .4, "Kolín": .2, "Litoměřice": .1, "Chomutov": 0,

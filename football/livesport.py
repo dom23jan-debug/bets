@@ -11,11 +11,8 @@ import gzip
 import json
 import os
 import re
-import zoneinfo
 
-from hockey.livesport import FEED, SITE, get, parse_records
-
-TZ = zoneinfo.ZoneInfo("Europe/Prague")   # Czech local time incl. daylight saving (dates of evening games)
+from hockey.livesport import FEED, SITE, TZ, get, parse_records  # noqa: F401  (TZ = Europe/Prague, re-exported)
 
 CACHE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "football")
 STATS_FEED = "https://local-cz.flashscore.ninja/2/x/feed/df_st_1_"

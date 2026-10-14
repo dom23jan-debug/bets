@@ -232,8 +232,10 @@ def analyse_game(lc, g, extra=True):
         o["tier"] = tier(o, stat, lc.model_filter)
         if o["tier"] in ("A", "A!") and lc.key not in EARLY_OK and (g["start"] - time.time()) / 3600 > LATE_HOURS:
             o["tier"] = "AP"           # second tiers / untested leagues: re-check ~2 h before kick-off
-        if o["tier"] is None and stat in WATCH_STATS and o["ev_model"] >= WATCH_EV and 1.4 <= o["odds"] <= 3.2 \
-                and 0.3 <= o["p_model"] <= 0.75:
+        # watch list only where the count models are fitted on the league itself (not UEFA cups: their ratings
+        # come from a few cup games and cannot compare teams across leagues)
+        if o["tier"] is None and lc.model_filter and stat in WATCH_STATS and o["ev_model"] >= WATCH_EV \
+                and 1.4 <= o["odds"] <= 3.2 and 0.3 <= o["p_model"] <= 0.75:
             o["tier"] = "S"
         need = TIERS[o["tier"].rstrip("!")]["ev"] if o["tier"] in TICKET_TIERS else TIERS["A"]["ev"]
         o["min_odds"] = o["odds"] * need / o["ev"] if o["ev"] > 0 else None

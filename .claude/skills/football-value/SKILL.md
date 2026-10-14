@@ -82,7 +82,10 @@ efficient in betting - most matches are "bez value"; say "dnes nesázet" when no
 | — | `trh*` (prices implied from the consensus λ: Fortuna team totals, lines not offered abroad) | never | lost in the backtest |
 | **S** | `jen model` corners / cards markets (team corners, "more corners", team cards) with EV model ≥ 1.15 | never on the ticket — log to `rejected.csv` | no market reference |
 | — | shots, shots on target, fouls, offsides | never | Fortuna counts more shots than Livesport/Opta: its main lines (26.5-29.5) sit ~10 % above Livesport league means (24.6-26.5) → model "unders" are artefacts. Model expectations are printed for information only |
-- UEFA cups (`model_filter=False`): consensus only — our per-league ratings cannot compare teams across leagues.
+- UEFA cups (`model_filter=False`): consensus only — our per-league ratings cannot compare teams across leagues
+  (14 Oct 2026: cup model Slovan – Stuttgart 32/22/45 % vs consensus 9/15/76 %). No "S" watch list for cups;
+  their corner / card expectations are printed for information only. Corners / cards totals still get tier C
+  vs the bet365 line (the model filter applies to statistics everywhere).
 - Prefer full-time main markets (1X2/AH/DNB/totals) over halves, HT/FT, correct score.
 - Max odds 3.2 on the ticket (user's choice, same as hockey) unless the user asks for longer odds.
 - A model-vs-consensus gap never creates value by itself (the model is behind the market: promoted teams,
