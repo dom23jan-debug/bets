@@ -38,11 +38,21 @@ def load():
     return list(csv.DictReader(open(PATH, encoding="utf-8")))
 
 
+def sport(league):
+    """'FOTBAL' for football league keys (football/leagues.py), otherwise 'HOKEJ'."""
+    try:
+        from football.leagues import LEAGUES as FOOTBALL
+    except ImportError:
+        return "HOKEJ"
+    return "FOTBAL" if league in FOOTBALL else "HOKEJ"
+
+
 def summary(rows):
     settled = [r for r in rows if r["result"] not in ("", "open")]
     by = collections.defaultdict(lambda: {"n": 0, "won": 0, "stake": 0.0, "profit": 0.0})
+    sports = {sport(r["league"]) for r in settled}
     for r in settled:
-        for k in ("CELKEM", r["league"]):
+        for k in ("CELKEM", r["league"]) + ((sport(r["league"]),) if len(sports) > 1 else ()):
             s = by[k]
             s["n"] += 1
             s["won"] += r["result"] in ("win", "half-win")
@@ -63,7 +73,7 @@ def markdown(rows):
                 .replace(",", " ") + f" ({money(tot['profit'], start, cur)}), v otevřených sázkách "
                 + f"{open_stake * start / 100:,.0f} {cur}".replace(",", " "), ""]
     out += ["| Liga | Sázek | Výher | Vsazeno | Zisk | ROI |", "|---|---|---|---|---|---|"]
-    for k, s in sorted(by.items(), key=lambda kv: (kv[0] != "CELKEM", kv[0])):
+    for k, s in sorted(by.items(), key=lambda kv: (kv[0] != "CELKEM", kv[0] not in ("HOKEJ", "FOTBAL"), kv[0])):
         kc = f" ({money(s['profit'], start, cur)})" if start else ""
         out.append(f"| {k} | {s['n']} | {s['won']} | {s['stake']:.2f} % | {s['profit']:+.2f} %{kc} | "
                    f"{100 * s['profit'] / s['stake']:+.1f} % |")
@@ -100,7 +110,7 @@ def html_page(rows):
         f"<tr><td>{e(k)}</td><td>{s['n']}</td><td>{s['won']}</td><td>{s['stake']:.2f} %</td>"
         f"<td class='{'pos' if s['profit'] >= 0 else 'neg'}'>{s['profit']:+.2f} %</td>"
         f"<td>{100 * s['profit'] / s['stake']:+.1f} %</td></tr>"
-        for k, s in sorted(by.items()) if k != "CELKEM")
+        for k, s in sorted(by.items(), key=lambda kv: (kv[0] not in ("HOKEJ", "FOTBAL"), kv[0])) if k != "CELKEM")
     bet_rows = ""
     for r in sorted(rows, key=lambda r: r["date"], reverse=True):
         res = r["result"] or "open"
@@ -131,7 +141,7 @@ padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}} th{{fo
 font-weight:600}} tr:last-child td{{border-bottom:0}} .pos{{color:var(--pos)}} .neg{{color:var(--neg)}}
 .tag{{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}}
 </style></head><body><main><h1>Sázkařský deník</h1>
-<div class="muted">Hokejové value bety · vklady v % startovního kapitálu · {len(rows)} sázek</div>
+<div class="muted">Value bety (hokej + fotbal) · vklady v % startovního kapitálu · {len(rows)} sázek</div>
 <div class="tiles">{tiles_html}</div>
 <h2>Podle ligy</h2><div class="wrap"><table><tr><th>Liga</th><th>Sázek</th><th>Výher</th><th>Vsazeno</th>
 <th>Zisk</th><th>ROI</th></tr>{league_rows}</table></div>

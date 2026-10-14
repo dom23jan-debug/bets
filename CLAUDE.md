@@ -1,10 +1,12 @@
-# Hockey value betting — instructions for Claude
+# Hockey + football value betting — instructions for Claude
 
-The user writes in Czech and answers are in Czech. Typical request: **„najdi mi hokejový value bet"**
-(or „co dnes vsadit", „value bety na dnes/zítra", a league name). Treat any such request as the
-full workflow below — no further questions needed unless a decision is genuinely theirs.
+The user writes in Czech and answers are in Czech. Typical requests: **„najdi mi hokejový value bet"**,
+**„najdi mi fotbalový value bet"** (or „co dnes vsadit", „value bety na dnes/zítra", a league or club
+name). Treat any such request as the full workflow (hockey below, football in its own section) — no
+further questions needed unless a decision is genuinely theirs. „value bet" without a sport = hockey (as
+before); football when the request names football (fotbal, a football league / club, rohy, karty ...).
 
-## Workflow for „najdi mi value bet"
+## Hockey workflow („najdi mi hokejový value bet")
 1. **Network check** (one command):
    `for u in https://www.livesport.cz https://liiga.fi https://www.shl.se https://api-web.nhle.com/v1/schedule/now; do echo "$u $(curl -s -o /dev/null -w '%{http_code}' --max-time 10 -A Mozilla/5.0 $u)"; done`
    Any `000` = blocked by the environment allowlist → tell the user immediately the exact domain line
@@ -33,6 +35,22 @@ full workflow below — no further questions needed unless a decision is genuine
    score_60, odds_source) with the stake it would have got (0.5 % if unknown); settle it together with bets.csv.
 7. **Commit & push** changed data/journal/params directly to `main` (the default branch), not to a new branch or PR.
 
+## Football workflow („najdi mi fotbalový value bet", rohy, karty, góly v poločase …) — skill `football-value`
+1. **Network check**:
+   `for u in https://www.livesport.cz https://global.ds.lsapp.eu https://api.ifortuna.cz/offer/structure/api/v1_0/sports https://api.sofascore.com/api/v1/sport/football/categories; do echo "$u $(curl -s -o /dev/null -w '%{http_code}' --max-time 10 -A Mozilla/5.0 $u)"; done`
+   (`000` = blocked → give the user the domain lines; the skill's `sources.md` lists what else to add.)
+2. **Settle open football bets** like hockey (league keys `eng1`, `cze1`, `ucl` … from `football/leagues.py`;
+   results via `football.livesport.league_page(path)`, closing odds via `football.livesport.odds_rows(id)`).
+3. **Scan**: `python3 -m football.daily [YYYY-MM-DD]` (all European leagues + UEFA cups with games that day;
+   other regions by key, e.g. `... daily <date> usa1 bra1 jpn1`). One league: `python3 -m football.scan <key> <date>`.
+4. **Verify** every candidate (skill `football-value`: tiers A/B/C, team news via Sofascore/Livesport missing
+   players, rotation, referee for cards, price re-check). Value = Czech price above the margin-free consensus of
+   ~30-60 international books; the own model must agree. Model-only statistics (shots, fouls, offsides,
+   team corners) never go on the ticket. "AP" (second tiers / untested leagues > 3 h before kick-off) =
+   re-scan ~2 h before kick-off, not a bet yet.
+5. **Answer / journal / commit** exactly as for hockey (steps 5-7 above); football bets go to the same
+   `journal/bets.csv` / `journal/rejected.csv` with their football league key.
+
 ## „Otevři deník" / „ukaž deník" / „jak jsem na tom"
 1. Settle open bets first if their matches are finished (step 2 above), commit & push to `main`.
 2. `python3 -m hockey.journal --html <scratchpad>/denik.html` → paste the markdown summary
@@ -57,9 +75,17 @@ full workflow below — no further questions needed unless a decision is genuine
   (`data/odds/`), `python3 -m hockey.market_bt [league ...] --out <file.csv.gz>` backtests model picks
   against them (one row per priced selection with payout) → check which markets / odds bands / phases pay.
 - New league: add to `hockey/leagues.py` (Livesport path), run tune, add a `hockey-<key>` skill.
+- Football: `python3 -m football.tune <key ...>` (goal model, ~30 s per league → `data/football/params.json`),
+  `python3 -m football.odds_hist <key ...> --season 2025-2026` (opening + closing odds, ~4 min per league,
+  `data/football/odds/`, not committed), `python3 -m football.market_bt <key ...> --out <f.csv.gz>` then
+  `python3 -m football.bt_report <f.csv.gz ...> [--price open]`; corners/cards vs bet365:
+  `python3 -m football.stat_bt <key ...>`. New league: add one line to `football/leagues.py`.
 
 ## Layout
 - `hockey/` shared engine (livesport, model, markets, scan, daily, backtest, tune, journal, shl_xg)
-- `.claude/skills/hockey-*` per-league knowledge; `hockey-value` = method and rules
+- `football/` football engine (livesport, fortuna, sofascore, model, markets, scan, daily, backtests)
+- `.claude/skills/hockey-*` per-league knowledge; `hockey-value` = method and rules;
+  `football-value` = football method, rules, sources (`sources.md`) and league notes (`leagues.md`)
 - `liiga_value.py`, `maxa_markets.py`, `nhl_value.py` league-specific legacy tools
-- `data/` caches and tuned params (committed so new sessions start fast); `journal/bets.csv` bet log
+- `data/` caches and tuned params (committed so new sessions start fast; football in `data/football/`);
+  `journal/bets.csv` bet log (hockey and football)

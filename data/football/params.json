@@ -1,0 +1,1960 @@
+{
+ "eng1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 370,
+  "logloss_1x2": 1.0266,
+  "baseline_1x2": 1.0847,
+  "logloss_ou25": 0.6903,
+  "baseline_ou25": 0.6886,
+  "gain_1x2_pct": 5.36,
+  "gain_ou25_pct": -0.24,
+  "stats_gain_pct": {
+   "cor": -0.18,
+   "yc": 0.07,
+   "cards": 0.13,
+   "sh": 0.15,
+   "sot": -0.27,
+   "fo": 0.6,
+   "off": 2.84
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "eng2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 540,
+  "logloss_1x2": 1.0589,
+  "baseline_1x2": 1.089,
+  "logloss_ou25": 0.6974,
+  "baseline_ou25": 0.7003,
+  "gain_1x2_pct": 2.76,
+  "gain_ou25_pct": 0.42,
+  "stats_gain_pct": {
+   "cor": -0.56,
+   "yc": -0.8,
+   "cards": -0.86,
+   "sh": 0.4,
+   "sot": -0.43,
+   "fo": 0.67,
+   "off": 2.22
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "eng3": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 539,
+  "logloss_1x2": 1.0406,
+  "baseline_1x2": 1.0668,
+  "logloss_ou25": 0.6843,
+  "baseline_ou25": 0.6931,
+  "gain_1x2_pct": 2.45,
+  "gain_ou25_pct": 1.27,
+  "stats_gain_pct": {
+   "cor": -0.34,
+   "yc": 0.14,
+   "cards": 0.22,
+   "sh": 1.32,
+   "sot": -0.22,
+   "fo": 0.7,
+   "off": 0.66
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "eng4": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 538,
+  "logloss_1x2": 1.0306,
+  "baseline_1x2": 1.0808,
+  "logloss_ou25": 0.6943,
+  "baseline_ou25": 0.694,
+  "gain_1x2_pct": 4.64,
+  "gain_ou25_pct": -0.04,
+  "stats_gain_pct": {
+   "cor": 0.53,
+   "yc": 0.06,
+   "cards": 0.14,
+   "sh": 0.94,
+   "sot": -0.25,
+   "fo": 1.47,
+   "off": 1.83
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "esp1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 370,
+  "logloss_1x2": 0.979,
+  "baseline_1x2": 1.0508,
+  "logloss_ou25": 0.6771,
+  "baseline_ou25": 0.6935,
+  "gain_1x2_pct": 6.83,
+  "gain_ou25_pct": 2.37,
+  "stats_gain_pct": {
+   "cor": 0.69,
+   "yc": -0.15,
+   "cards": -0.46,
+   "sh": 2.6,
+   "sot": 1.21,
+   "fo": 4.23,
+   "off": 6.07
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "esp2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 450,
+  "logloss_1x2": 1.0577,
+  "baseline_1x2": 1.0744,
+  "logloss_ou25": 0.6891,
+  "baseline_ou25": 0.6939,
+  "gain_1x2_pct": 1.55,
+  "gain_ou25_pct": 0.68,
+  "stats_gain_pct": {
+   "cor": -0.62,
+   "yc": 0.36,
+   "cards": 0.31,
+   "sh": 1.87,
+   "sot": 1.79,
+   "fo": 2.95,
+   "off": 3.75
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "ita1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 368,
+  "logloss_1x2": 0.9951,
+  "baseline_1x2": 1.0877,
+  "logloss_ou25": 0.6938,
+  "baseline_ou25": 0.6907,
+  "gain_1x2_pct": 8.52,
+  "gain_ou25_pct": -0.45,
+  "stats_gain_pct": {
+   "cor": -0.47,
+   "yc": 0.59,
+   "cards": 0.82,
+   "sh": 0.35,
+   "sot": -0.14,
+   "fo": 2.28,
+   "off": 0.68
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "ita2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 372,
+  "logloss_1x2": 1.0348,
+  "baseline_1x2": 1.0687,
+  "logloss_ou25": 0.6901,
+  "baseline_ou25": 0.6933,
+  "gain_1x2_pct": 3.17,
+  "gain_ou25_pct": 0.47,
+  "stats_gain_pct": {
+   "cor": -0.52,
+   "yc": -0.43,
+   "cards": -0.45,
+   "sh": 1.14,
+   "sot": 1.39,
+   "fo": 0.98,
+   "off": 0.95
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "ger1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 297,
+  "logloss_1x2": 0.9742,
+  "baseline_1x2": 1.0774,
+  "logloss_ou25": 0.6502,
+  "baseline_ou25": 0.6578,
+  "gain_1x2_pct": 9.58,
+  "gain_ou25_pct": 1.16,
+  "stats_gain_pct": {
+   "cor": 0.23,
+   "yc": -0.52,
+   "cards": -0.42,
+   "sh": 1.23,
+   "sot": 0.74,
+   "fo": 2.35,
+   "off": -0.24
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "ger2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 295,
+  "logloss_1x2": 1.0342,
+  "baseline_1x2": 1.0685,
+  "logloss_ou25": 0.6826,
+  "baseline_ou25": 0.6813,
+  "gain_1x2_pct": 3.22,
+  "gain_ou25_pct": -0.19,
+  "stats_gain_pct": {
+   "cor": -1.14,
+   "yc": -0.1,
+   "cards": -0.37,
+   "sh": -0.0,
+   "sot": -0.36,
+   "fo": 1.11,
+   "off": 2.96
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "ger3": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 370,
+  "logloss_1x2": 1.0122,
+  "baseline_1x2": 1.0602,
+  "logloss_ou25": 0.6592,
+  "baseline_ou25": 0.6664,
+  "gain_1x2_pct": 4.53,
+  "gain_ou25_pct": 1.08,
+  "stats_gain_pct": {
+   "cor": -0.67,
+   "yc": 0.37,
+   "cards": 0.21,
+   "sh": 0.23,
+   "sot": -0.16,
+   "fo": 0.38,
+   "off": 1.38
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "fra1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 297,
+  "logloss_1x2": 0.9951,
+  "baseline_1x2": 1.0676,
+  "logloss_ou25": 0.6859,
+  "baseline_ou25": 0.6931,
+  "gain_1x2_pct": 6.79,
+  "gain_ou25_pct": 1.04,
+  "stats_gain_pct": {
+   "cor": -0.49,
+   "yc": 1.39,
+   "cards": 1.49,
+   "sh": 0.63,
+   "sot": 0.28,
+   "fo": 2.66,
+   "off": 0.86
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "fra2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 293,
+  "logloss_1x2": 1.0733,
+  "baseline_1x2": 1.1201,
+  "logloss_ou25": 0.6814,
+  "baseline_ou25": 0.692,
+  "gain_1x2_pct": 4.18,
+  "gain_ou25_pct": 1.53,
+  "stats_gain_pct": {
+   "cor": -0.12,
+   "yc": -0.94,
+   "cards": -0.97,
+   "sh": 2.1,
+   "sot": -0.35,
+   "fo": 0.66,
+   "off": 5.41
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "ned1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 297,
+  "logloss_1x2": 0.9942,
+  "baseline_1x2": 1.0716,
+  "logloss_ou25": 0.657,
+  "baseline_ou25": 0.6742,
+  "gain_1x2_pct": 7.22,
+  "gain_ou25_pct": 2.55,
+  "stats_gain_pct": {
+   "cor": -0.71,
+   "yc": -0.78,
+   "cards": -0.97,
+   "sh": -0.59,
+   "sot": -0.25,
+   "fo": 2.34,
+   "off": -0.85
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "ned2": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 371,
+  "logloss_1x2": 1.0437,
+  "baseline_1x2": 1.0662,
+  "logloss_ou25": 0.6604,
+  "baseline_ou25": 0.6595,
+  "gain_1x2_pct": 2.11,
+  "gain_ou25_pct": -0.14,
+  "stats_gain_pct": {
+   "cor": -0.47,
+   "yc": 1.19,
+   "cards": 0.92,
+   "sh": 1.21,
+   "sot": 0.32,
+   "fo": 4.1,
+   "off": 1.59
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "por1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 297,
+  "logloss_1x2": 0.9283,
+  "baseline_1x2": 1.0843,
+  "logloss_ou25": 0.6751,
+  "baseline_ou25": 0.6943,
+  "gain_1x2_pct": 14.38,
+  "gain_ou25_pct": 2.76,
+  "stats_gain_pct": {
+   "cor": -0.22,
+   "yc": -1.19,
+   "cards": -1.22,
+   "sh": 1.15,
+   "sot": 0.53,
+   "fo": 2.81,
+   "off": -0.31
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "bel1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 292,
+  "logloss_1x2": 1.0238,
+  "baseline_1x2": 1.0914,
+  "logloss_ou25": 0.695,
+  "baseline_ou25": 0.6967,
+  "gain_1x2_pct": 6.2,
+  "gain_ou25_pct": 0.24,
+  "stats_gain_pct": {
+   "cor": -0.46,
+   "yc": 0.76,
+   "cards": 0.66,
+   "sh": 1.78,
+   "sot": -0.06,
+   "fo": 1.1,
+   "off": 3.96
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "tur1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 300,
+  "logloss_1x2": 0.9944,
+  "baseline_1x2": 1.0926,
+  "logloss_ou25": 0.6791,
+  "baseline_ou25": 0.6925,
+  "gain_1x2_pct": 8.99,
+  "gain_ou25_pct": 1.94,
+  "stats_gain_pct": {
+   "cor": -0.73,
+   "yc": -0.06,
+   "cards": -0.19,
+   "sh": 2.97,
+   "sot": 2.18,
+   "fo": 1.29,
+   "off": 0.09
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "sco1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 207,
+  "logloss_1x2": 0.9861,
+  "baseline_1x2": 1.085,
+  "logloss_ou25": 0.6844,
+  "baseline_ou25": 0.6995,
+  "gain_1x2_pct": 9.11,
+  "gain_ou25_pct": 2.16,
+  "stats_gain_pct": {
+   "cor": 0.57,
+   "yc": -0.07,
+   "cards": -0.05,
+   "sh": 0.33,
+   "sot": -0.29,
+   "fo": 3.2,
+   "off": -0.67
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "aut1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 156,
+  "logloss_1x2": 1.0703,
+  "baseline_1x2": 1.0893,
+  "logloss_ou25": 0.6881,
+  "baseline_ou25": 0.6979,
+  "gain_1x2_pct": 1.74,
+  "gain_ou25_pct": 1.4,
+  "stats_gain_pct": {
+   "cor": 0.21,
+   "yc": 0.69,
+   "cards": 0.46,
+   "sh": 4.49,
+   "sot": 0.49,
+   "fo": 0.66,
+   "off": -0.23
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "sui1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 207,
+  "logloss_1x2": 1.0496,
+  "baseline_1x2": 1.1058,
+  "logloss_ou25": 0.6349,
+  "baseline_ou25": 0.6637,
+  "gain_1x2_pct": 5.08,
+  "gain_ou25_pct": 4.35,
+  "stats_gain_pct": {
+   "cor": -0.11,
+   "yc": 1.61,
+   "cards": 1.11,
+   "sh": 3.15,
+   "sot": -0.08,
+   "fo": 3.61,
+   "off": 0.04
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "den1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 156,
+  "logloss_1x2": 1.0341,
+  "baseline_1x2": 1.0868,
+  "logloss_ou25": 0.682,
+  "baseline_ou25": 0.679,
+  "gain_1x2_pct": 4.85,
+  "gain_ou25_pct": -0.44,
+  "stats_gain_pct": {
+   "cor": -0.87,
+   "yc": 1.79,
+   "cards": 1.9,
+   "sh": 0.05,
+   "sot": -0.36,
+   "fo": 3.22,
+   "off": -0.43
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "cze1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 253,
+  "logloss_1x2": 0.9994,
+  "baseline_1x2": 1.0805,
+  "logloss_ou25": 0.6796,
+  "baseline_ou25": 0.6954,
+  "gain_1x2_pct": 7.5,
+  "gain_ou25_pct": 2.26,
+  "stats_gain_pct": {
+   "cor": -0.19,
+   "yc": 0.42,
+   "cards": 0.51,
+   "sh": 1.27,
+   "sot": 1.26,
+   "fo": 4.03,
+   "off": 0.07
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "cze2": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 233,
+  "logloss_1x2": 1.0532,
+  "baseline_1x2": 1.0764,
+  "logloss_ou25": 0.6989,
+  "baseline_ou25": 0.6961,
+  "gain_1x2_pct": 2.16,
+  "gain_ou25_pct": -0.41,
+  "stats_gain_pct": {
+   "cor": -0.18,
+   "yc": 0.12,
+   "cards": 0.12,
+   "sh": 0.18,
+   "sot": 0.23
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "svk1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 156,
+  "logloss_1x2": 1.0152,
+  "baseline_1x2": 1.0818,
+  "logloss_ou25": 0.679,
+  "baseline_ou25": 0.6841,
+  "gain_1x2_pct": 6.16,
+  "gain_ou25_pct": 0.74,
+  "stats_gain_pct": {
+   "cor": -0.65,
+   "yc": 0.64,
+   "cards": 0.81,
+   "sh": -0.09,
+   "sot": -0.04,
+   "fo": 0.2,
+   "off": 1.25
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "pol1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 298,
+  "logloss_1x2": 1.0648,
+  "baseline_1x2": 1.0717,
+  "logloss_ou25": 0.6854,
+  "baseline_ou25": 0.6934,
+  "gain_1x2_pct": 0.64,
+  "gain_ou25_pct": 1.15,
+  "stats_gain_pct": {
+   "cor": -0.08,
+   "yc": 0.3,
+   "cards": 0.23,
+   "sh": 1.06,
+   "sot": 1.62,
+   "fo": 2.16,
+   "off": 1.61
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "gre1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 198,
+  "logloss_1x2": 0.9485,
+  "baseline_1x2": 1.0914,
+  "logloss_ou25": 0.6709,
+  "baseline_ou25": 0.6935,
+  "gain_1x2_pct": 13.09,
+  "gain_ou25_pct": 3.26,
+  "stats_gain_pct": {
+   "cor": -0.51,
+   "yc": 0.56,
+   "cards": 0.6,
+   "sh": 0.5,
+   "sot": -0.32,
+   "fo": 2.25,
+   "off": 1.14
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "cro1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 175,
+  "logloss_1x2": 0.9871,
+  "baseline_1x2": 1.0709,
+  "logloss_ou25": 0.69,
+  "baseline_ou25": 0.6959,
+  "gain_1x2_pct": 7.82,
+  "gain_ou25_pct": 0.85,
+  "stats_gain_pct": {
+   "cor": -0.74,
+   "yc": -0.37,
+   "cards": -0.44,
+   "sh": -0.23,
+   "sot": 0.09,
+   "fo": -0.39,
+   "off": -0.59
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "srb1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.6,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 261,
+  "logloss_1x2": 0.9972,
+  "baseline_1x2": 1.0928,
+  "logloss_ou25": 0.69,
+  "baseline_ou25": 0.6996,
+  "gain_1x2_pct": 8.74,
+  "gain_ou25_pct": 1.38,
+  "stats_gain_pct": {
+   "cor": -0.14,
+   "yc": 1.16,
+   "cards": 1.31,
+   "sh": 1.74,
+   "sot": 1.25,
+   "fo": 3.07,
+   "off": 3.33
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "rou1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 262,
+  "logloss_1x2": 1.007,
+  "baseline_1x2": 1.0812,
+  "logloss_ou25": 0.6806,
+  "baseline_ou25": 0.7028,
+  "gain_1x2_pct": 6.86,
+  "gain_ou25_pct": 3.16,
+  "stats_gain_pct": {
+   "cor": -0.73,
+   "yc": -0.17,
+   "cards": -0.2,
+   "sh": 1.12,
+   "sot": 0.9,
+   "fo": 1.11,
+   "off": 0.58
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "hun1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025-2026",
+  "n_test": 192,
+  "logloss_1x2": 1.0093,
+  "baseline_1x2": 1.0963,
+  "logloss_ou25": 0.6756,
+  "baseline_ou25": 0.6833,
+  "gain_1x2_pct": 7.94,
+  "gain_ou25_pct": 1.14,
+  "stats_gain_pct": {
+   "cor": 0.2,
+   "yc": -0.16,
+   "cards": -0.28,
+   "sh": 0.88,
+   "sot": 0.73,
+   "fo": 2.48,
+   "off": -0.41
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "nor1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 231,
+  "logloss_1x2": 0.94,
+  "baseline_1x2": 1.0431,
+  "logloss_ou25": 0.6623,
+  "baseline_ou25": 0.6759,
+  "gain_1x2_pct": 9.89,
+  "gain_ou25_pct": 2.01,
+  "stats_gain_pct": {
+   "cor": 1.23,
+   "yc": 0.67,
+   "cards": 0.91,
+   "sh": 3.9,
+   "sot": 1.62,
+   "fo": 2.56,
+   "off": 1.37
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "swe1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 230,
+  "logloss_1x2": 1.006,
+  "baseline_1x2": 1.0752,
+  "logloss_ou25": 0.6882,
+  "baseline_ou25": 0.6954,
+  "gain_1x2_pct": 6.44,
+  "gain_ou25_pct": 1.03,
+  "stats_gain_pct": {
+   "cor": -0.38,
+   "yc": 0.63,
+   "cards": 0.77,
+   "sh": 3.81,
+   "sot": 0.98,
+   "fo": 0.57,
+   "off": -1.19
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "fin1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 153,
+  "logloss_1x2": 0.9902,
+  "baseline_1x2": 1.0883,
+  "logloss_ou25": 0.6374,
+  "baseline_ou25": 0.6398,
+  "gain_1x2_pct": 9.01,
+  "gain_ou25_pct": 0.38,
+  "stats_gain_pct": {
+   "cor": 0.52,
+   "yc": 0.87,
+   "cards": 1.19,
+   "sh": 0.73,
+   "sot": 0.11,
+   "fo": 0.61,
+   "off": 1.0
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "usa1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 494,
+  "logloss_1x2": 1.0401,
+  "baseline_1x2": 1.073,
+  "logloss_ou25": 0.67,
+  "baseline_ou25": 0.6852,
+  "gain_1x2_pct": 3.06,
+  "gain_ou25_pct": 2.22,
+  "stats_gain_pct": {
+   "cor": 0.02,
+   "yc": 0.47,
+   "cards": 0.6,
+   "sh": 0.7,
+   "sot": -0.06,
+   "fo": 1.13,
+   "off": 1.78
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "mex1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025-2026",
+  "n_test": 299,
+  "logloss_1x2": 0.9946,
+  "baseline_1x2": 1.0609,
+  "logloss_ou25": 0.6877,
+  "baseline_ou25": 0.6862,
+  "gain_1x2_pct": 6.25,
+  "gain_ou25_pct": -0.23,
+  "stats_gain_pct": {
+   "cor": 0.05,
+   "yc": -0.24,
+   "cards": -0.24,
+   "sh": -0.16,
+   "sot": -0.59,
+   "fo": 0.15,
+   "off": 0.75
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "bra1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.9,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 370,
+  "logloss_1x2": 0.983,
+  "baseline_1x2": 1.0393,
+  "logloss_ou25": 0.6918,
+  "baseline_ou25": 0.6904,
+  "gain_1x2_pct": 5.42,
+  "gain_ou25_pct": -0.2,
+  "stats_gain_pct": {
+   "cor": -0.22,
+   "yc": 0.77,
+   "cards": 0.63,
+   "sh": 0.21,
+   "sot": 0.21,
+   "fo": 1.16,
+   "off": 2.25
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "arg1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.6,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2025",
+  "n_test": 453,
+  "logloss_1x2": 1.0643,
+  "baseline_1x2": 1.0894,
+  "logloss_ou25": 0.6316,
+  "baseline_ou25": 0.6357,
+  "gain_1x2_pct": 2.31,
+  "gain_ou25_pct": 0.64,
+  "stats_gain_pct": {
+   "cor": -0.1,
+   "yc": 0.73,
+   "cards": 0.69,
+   "sh": 0.98,
+   "sot": 0.96,
+   "fo": 1.34,
+   "off": 2.62
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ },
+ "jpn1": {
+  "params": {
+   "half_life": 365,
+   "offseason": 0.9,
+   "xg_weight": 0.7,
+   "ridge": 2.0,
+   "total_k": 0.25
+  },
+  "test_season": "2026",
+  "n_test": 188,
+  "logloss_1x2": 0.9869,
+  "baseline_1x2": 0.9956,
+  "logloss_ou25": 0.7113,
+  "baseline_ou25": 0.7254,
+  "gain_1x2_pct": 0.87,
+  "gain_ou25_pct": 1.95,
+  "stats_gain_pct": {
+   "cor": 0.88,
+   "yc": 0.71,
+   "cards": 0.57,
+   "sh": 1.4,
+   "sot": 0.7,
+   "fo": 1.14,
+   "off": 4.09
+  },
+  "top3": [
+   {
+    "half_life": 365,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.25
+   },
+   {
+    "half_life": 365,
+    "offseason": 0.6,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.25
+   }
+  ]
+ },
+ "kor1": {
+  "params": {
+   "half_life": 180,
+   "offseason": 0.9,
+   "xg_weight": 0.4,
+   "ridge": 2.0,
+   "total_k": 0.75
+  },
+  "test_season": "2025",
+  "n_test": 207,
+  "logloss_1x2": 1.0706,
+  "baseline_1x2": 1.0835,
+  "logloss_ou25": 0.6939,
+  "baseline_ou25": 0.6931,
+  "gain_1x2_pct": 1.19,
+  "gain_ou25_pct": -0.11,
+  "stats_gain_pct": {
+   "cor": 0.22,
+   "yc": -0.05,
+   "cards": -0.09,
+   "sh": 3.44,
+   "sot": 2.14,
+   "fo": 0.09,
+   "off": 2.0
+  },
+  "top3": [
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.4,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.7,
+    "ridge": 2.0,
+    "total_k": 0.75
+   },
+   {
+    "half_life": 180,
+    "offseason": 0.9,
+    "xg_weight": 0.9,
+    "ridge": 2.0,
+    "total_k": 0.75
+   }
+  ]
+ }
+}
