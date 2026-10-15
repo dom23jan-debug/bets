@@ -32,3 +32,7 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-10,shl,Färjestad – Malmö,Handicap 60 min,Malmö +1.5,Tipsport,1.92,0.6,1.044,,loss,-0.6
 2026-10-10,liiga,Tappara – TPS Turku,Sázka bez remízy 60 min,TPS Turku,Chance,2.62,0.5,1.031,,push,0
 2026-10-15,uecl,Brann – Lincoln,Rohy celkem (zápas),Méně než 10.5,Fortuna,1.76,0.5,1.055,,open,
+=======
+2026-10-15,del,Wolfsburg – Krefeld,Sázka bez remízy 60 min,Krefeld,Chance,2.96,1.2,1.192,,open,
+2026-10-15,shl,Växjö – Skellefteå,1X2 60 min,Skellefteå,Chance,2.31,0.9,1.090,,open,
+2026-10-15,shl,Linköping – Frölunda,1X2 60 min,Linköping,Betano,3.15,0.5,1.060,,open,
