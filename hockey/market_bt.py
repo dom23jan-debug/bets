@@ -1,7 +1,7 @@
 """Backtest against real bookmaker odds (walk-forward, weekly refits) — which markets, odds bands and
 filters would have made money in a past season.
 
-Usage: python3 -m hockey.market_bt [league ...] [--season 2025-2026] [--out data/market_bt.csv.gz]
+Usage: python3 -m hockey.market_bt [league ...] [--season 2025-2026|current] [--out data/market_bt.csv.gz]
 Needs closing odds from `python3 -m hockey.odds_hist`. Writes one row per priced selection
 (model and no-vig market probability, best odds, payout) so strategies can be compared offline.
 """
@@ -21,6 +21,9 @@ COLS = ["league", "event", "start", "home", "away", "bt", "scope", "sel", "line"
         "fair", "p_model", "p_market", "ev_model", "ev_market", "payout", "n_games"]
 
 
+SEASONS = ["2024-2025", "2025-2026", "current"]  # "current" = season in progress (out-of-sample check)
+
+
 def settle(key, m):
     """Payout per unit stake (0 = loss, 1 = push, odds = win) via a degenerate score distribution."""
     h, a = regulation(m)
@@ -31,7 +34,8 @@ def settle(key, m):
 def run(key, season="2025-2026"):
     odds = load_odds(key)
     _, matches = load_league(key, LEAGUES[key]["path"], seasons=("2025-2026", "2024-2025"), refresh_current=False)
-    matches = [m for m in matches if m.get("season") in ("2024-2025", "2025-2026")]
+    prior = SEASONS[max(0, SEASONS.index(season) - 1)]
+    matches = [m for m in matches if m.get("season") in (prior, season)]
     regular = [m for m in matches if is_regular(m)]
     test = [m for m in regular if m.get("season") == season and m["id"] in odds]
     if not test:

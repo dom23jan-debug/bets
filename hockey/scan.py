@@ -14,6 +14,30 @@ from .markets import kelly_quarter, label, scan
 from .model import Ratings, calibrate_shape, league_profile, period_dist, pmf, score_dist
 
 EV_MIN = 1.03
+# High-hit-rate "favourite" rules (hockey.market_bt vs. best of 4 Czech books, 16 Oct 2026):
+#  FAV  1X2 favourite (60 min) at 1.40-2.10 when the model rates it at least as high as the market:
+#       2025/26 416 bets, 58 % hits, ROI +7.5 % (positive early and late season); 2026/27 81 bets, 61 %, +9 %.
+#  SAFE winner incl. OT favourite at 1.30-1.80, model >= market + 4 pp, both teams <= 10 games:
+#       2025/26 41 bets, 78 % hits, +28 %; 2026/27 39 bets, 80 %, +32 % (small samples).
+FAV_ODDS = (1.40, 2.10)
+SAFE_ODDS, SAFE_GAP, SAFE_GAMES = (1.30, 1.80), 0.04, 10
+FAV_STAKE = 0.01
+
+
+def favourite_pick(res, n_games):
+    """Market favourite that passes the SAFE or FAV rule (SAFE preferred: higher hit rate), else None."""
+    mk = {o["key"]: o for o in res}
+    for bt, scope, lo_hi, gap, kind in (("HOME_AWAY", "FULL_TIME_OVER_TIME", SAFE_ODDS, SAFE_GAP, "SAFE"),
+                                        ("HOME_DRAW_AWAY", "FULL_TIME", FAV_ODDS, 0.0, "FAV")):
+        if kind == "SAFE" and n_games > SAFE_GAMES:
+            continue
+        sides = [mk[k] for k in ((bt, scope, "1", None), (bt, scope, "2", None)) if k in mk]
+        if not sides:
+            continue
+        f = max(sides, key=lambda o: o["p_market"])
+        if lo_hi[0] <= f["odds"] <= lo_hi[1] and f["p_model"] >= f["p_market"] + gap:
+            return dict(f, kind=kind, min_odds=lo_hi[0], stake=FAV_STAKE)
+    return None
 
 
 def p1_tie_factor(profile):
@@ -78,7 +102,14 @@ def analyse(key, date, show_all=False, out=print):
             if o["ev"] >= EV_MIN:
                 picks.append(dict(o, league=key, game=f"{g['home']} – {g['away']}", start=start,
                                   label=label(o["key"], g["home"], g["away"]), stake=stake,
-                                  n_games=min(played[g["home"]], played[g["away"]])))
+                                  n_games=min(played[g["home"]], played[g["away"]]), kind="VALUE"))
+        n_games = min(played[g["home"]], played[g["away"]])
+        fav = favourite_pick(res, n_games)
+        if fav:
+            picks.append(dict(fav, league=key, game=f"{g['home']} – {g['away']}", start=start, n_games=n_games,
+                              label=label(fav["key"], g["home"], g["away"])))
+            out(f"  FAVORIT ({fav['kind']}) {picks[-1]['label']} @ {fav['odds']:.2f} {fav['book']}"
+                f" | model {100*fav['p_model']:.1f} % trh {100*fav['p_market']:.1f} %")
         if not shown:
             out("  bez value")
     return picks

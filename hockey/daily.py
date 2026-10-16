@@ -45,6 +45,8 @@ def main():
             picks += analyse(lg, date)
         except Exception as exc:  # one broken league must not stop the others
             print(f"\n## {lg}: chyba {exc!r}")
+    favs = [p for p in picks if p["kind"] in ("SAFE", "FAV")]
+    picks = [p for p in picks if p["kind"] == "VALUE"]
     late = [p for p in picks if p.get("n_games", 0) > EARLY_GAMES]
     ticket = best_per_match([p for p in picks if p.get("n_games", 0) <= EARLY_GAMES])
     print(f"\n## Tiket {date} (1 sázka na zápas, kurz ≤ {MAX_ODDS:g}) — před doporučením ověř každý tip (viz CLAUDE.md)")
@@ -54,6 +56,13 @@ def main():
               f" | model {100*p['p_model']:.1f} % trh {100*p['p_market']:.1f} %")
     if not ticket:
         print("  žádná value")
+    print(f"\n## Favorit-tiket {date} (vysoká úspěšnost, plochý vklad 1 %) — SAFE = vítěz vč. prodl. 1.30–1.80, model ≥ trh"
+          f" + 4 pb, ≤ 10 zápasů (backtest ~79 % výher); FAV = favorit 1X2 60 min 1.40–2.10, model ≥ trh (~59 %, ROI +8 %)")
+    for p in sorted(favs, key=lambda p: (p["kind"] != "SAFE", p["start"])):
+        print(f"  {p['start']} [{p['league']}] {p['kind']:4} {p['game']:32} {p['label']:46} @ {p['odds']:.2f} {p['book']:12}"
+              f" | value od {p['min_odds']:.2f} | model {100*p['p_model']:.1f} % trh {100*p['p_market']:.1f} %")
+    if not favs:
+        print("  žádný favorit nesplňuje pravidla")
     if late:
         games = sorted({p["game"] for p in late})
         print(f"\n  Mimo tiket (týmy už mají > {EARLY_GAMES} zápasů, kdy model v backtestu proti trhu prodělával): "

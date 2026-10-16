@@ -29,6 +29,11 @@ before); football when the request names football (fotbal, a football league / c
 5. **Answer** (Czech, concise): ticket table — time, match, bet, odds + bookmaker, EV, „value od"
    (minimum odds), stake % — plus one line „proč" per bet, then rejected candidates in one line each.
    If nothing passes, say clearly „dnes nesázet".
+   Then the **Favorit-tiket** from `hockey.daily` (high hit rate, flat 1 % stake, Dominik asked 16 Oct 2026):
+   SAFE = winner incl. OT favourite 1.30–1.80, model ≥ market + 4 pp, ≤ 10 games (backtest ~79 % hits);
+   FAV = 1X2 60-min favourite 1.40–2.10, model ≥ market (~59 % hits, ROI +8 %, works late season too).
+   Verify them like value bets (goalie, injuries); one bet per match across both tickets. Journal with
+   market suffix `[SAFE]` / `[FAV]` (e.g. `1X2 60 min [FAV]`) so they can be evaluated separately.
 6. **Journal**: append the recommended bets to `journal/bets.csv` with result `open` — skip any bet already
    in the journal for the same date + match (no duplicates when the analysis is re-run the same day).
    Append every rejected candidate (incl. totals) to `journal/rejected.csv` (same columns + reason_cat, reason,
