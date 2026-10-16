@@ -100,16 +100,23 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-13,nhl,Dallas – Colorado,Handicap (60 min),Colorado -2.5,Tipsport,5.29,0.5,1.062,,loss,-0.50,kurz nad 3.2,"vysoký rozptyl, trh EV < 1",,nhl_value
 2026-10-13,nhl,Anaheim – Calgary,1X2 (60 min),X,Fortuna,4.60,0.5,1.067,,loss,-0.50,kurz nad 3.2,remíza nad limitem kurzu,,nhl_value
 2026-10-13,nhl,Los Angeles – Edmonton,Handicap (60 min),Los Angeles -2.5,Chance,5.35,0.5,1.053,,loss,-0.50,kurz nad 3.2,"vysoký rozptyl, trh EV 0.95",,nhl_value
-2026-10-14,liiga,JYP – Lukko,Počet gólů (60 min),Méně než 4.5,Tipsport,3.03,0.5,1.109,,open,,totals,model na totals nemá edge; xG model i trh 1X2 ≈ shodné,,livesport
-2026-10-14,liiga,KalPa – Ässät,1X2 (60 min),Ässät,Veikkaus,2.42,0.5,1.078,,open,,mimo tiket,"týmy > 10 zápasů; jen xG model, hlavní model 39.7 % ≈ trh 38.1 %",,liiga_value
-2026-10-14,liiga,IFK Helsinki – TPS Turku,1X2 (60 min),TPS Turku,Veikkaus,2.17,0.5,1.048,,open,,mimo tiket,"týmy > 10 zápasů; jen xG model, hlavní model bez value",,liiga_value
-2026-10-14,maxa,Jihlava – Přerov,Handicap (60 min),Přerov +1.5,Chance,2.20,0.5,1.106,,open,,mimo tiket,"týmy > 10 zápasů; oba modely chtějí Přerov (+16 pp vs trh), Přerov skóre 26:41",,livesport
-2026-10-14,maxa,Slavia Praha – Tábor,Sázka bez remízy (60 min),Tábor,Fortuna,2.13,0.5,1.082,,open,,mimo tiket,týmy > 10 zápasů; oba modely chtějí Tábor (skóre 34:22 vs Slavia 29:42),,livesport
-2026-10-14,maxa,Třebíč – Kolín,Vítěz vč. prodl.,Kolín,Tipsport,2.46,0.5,1.041,,open,,mimo tiket,týmy > 10 zápasů; model z 30. 9. bez value,,livesport
-2026-10-14,maxa,Zlín – Sokolov,Vítěz vč. prodl.,Sokolov,Chance,2.64,0.5,1.030,,open,,mimo tiket,"týmy > 10 zápasů; hraniční EV, model z 30. 9. bez value",,livesport
-2026-10-14,maxa,Chomutov – Frýdek-Místek,1X2 (60 min),Frýdek-Místek,Chance,2.76,0.5,1.032,,open,,mimo tiket,"týmy > 10 zápasů; hraniční EV, model z 30. 9. chce jen overy",,livesport
-2026-10-14,maxa,Zlín – Sokolov,Počet gólů (1. třetina),Více než 1.5,Betano,2.15,0.5,1.126,,open,,totals,"jen model z 30. 9., totals bez edge",,maxa_markets
-2026-10-14,nl,Lausanne – Ajoie,Handicap (60 min),Ajoie +1.5,Chance,2.18,0.5,1.044,,open,,mimo tiket,týmy > 10 zápasů; jen Chance,,livesport
+2026-10-14,liiga,JYP – Lukko,Počet gólů (60 min),Méně než 4.5,Tipsport,3.03,0.5,1.109,2.38,win,1.015,totals,model na totals nemá edge; xG model i trh 1X2 ≈ shodné,,livesport
+2026-10-14,liiga,KalPa – Ässät,1X2 (60 min),Ässät,Veikkaus,2.42,0.5,1.078,,win,0.71,mimo tiket,"týmy > 10 zápasů; jen xG model, hlavní model 39.7 % ≈ trh 38.1 %",,liiga_value
+2026-10-14,liiga,IFK Helsinki – TPS Turku,1X2 (60 min),TPS Turku,Veikkaus,2.17,0.5,1.048,,loss,-0.5,mimo tiket,"týmy > 10 zápasů; jen xG model, hlavní model bez value",,liiga_value
+2026-10-14,maxa,Jihlava – Přerov,Handicap (60 min),Přerov +1.5,Chance,2.20,0.5,1.106,2.15,loss,-0.5,mimo tiket,"týmy > 10 zápasů; oba modely chtějí Přerov (+16 pp vs trh), Přerov skóre 26:41",,livesport
+2026-10-14,maxa,Slavia Praha – Tábor,Sázka bez remízy (60 min),Tábor,Fortuna,2.13,0.5,1.082,2.13,push,0,mimo tiket,týmy > 10 zápasů; oba modely chtějí Tábor (skóre 34:22 vs Slavia 29:42),,livesport
+2026-10-14,maxa,Třebíč – Kolín,Vítěz vč. prodl.,Kolín,Tipsport,2.46,0.5,1.041,2.46,loss,-0.5,mimo tiket,týmy > 10 zápasů; model z 30. 9. bez value,,livesport
+2026-10-14,maxa,Zlín – Sokolov,Vítěz vč. prodl.,Sokolov,Chance,2.64,0.5,1.030,2.74,loss,-0.5,mimo tiket,"týmy > 10 zápasů; hraniční EV, model z 30. 9. bez value",,livesport
+2026-10-14,maxa,Chomutov – Frýdek-Místek,1X2 (60 min),Frýdek-Místek,Chance,2.76,0.5,1.032,2.76,loss,-0.5,mimo tiket,"týmy > 10 zápasů; hraniční EV, model z 30. 9. chce jen overy",,livesport
+2026-10-14,maxa,Zlín – Sokolov,Počet gólů (1. třetina),Více než 1.5,Betano,2.15,0.5,1.126,2.00,loss,-0.5,totals,"jen model z 30. 9., totals bez edge",,maxa_markets
+2026-10-14,nl,Lausanne – Ajoie,Handicap (60 min),Ajoie +1.5,Chance,2.18,0.5,1.044,2.18,loss,-0.5,mimo tiket,týmy > 10 zápasů; jen Chance,,livesport
 2026-10-15,uecl,Univ. Craiova – Getafe,1X2 (zápas),Getafe,Tipsport,2.84,0.5,1.058,,loss,-0.5,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; konsenzus 30 kanceláří; Getafe bez Ünala, Azóna, Mangaly",,football.daily
 2026-10-15,uecl,Hearts – Nordsjaelland,Sázka bez remízy (zápas),Nordsjaelland,Betano,1.83,0.5,1.033,,push,0,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; Hearts bez Spittala, Halketta",,football.daily
 2026-10-15,ksa1,Al Hazem – Al Fateh,Žluté karty Al Hazem (zápas),Více než 2.5,Fortuna,3.00,0.5,1.288,,loss,-0.5,jen model (S),statistika bez tržní reference,,football.daily
+2026-10-15,shl,Växjö – Skellefteå,Handicap (60 min),Skellefteå -1.5,Chance,3.18,0.5,1.125,,open,,jedna sázka na zápas,"vyšší EV, ale zvolen nižší rozptyl (1X2 Skellefteå)",,livesport
+2026-10-15,liiga,Sport – KooKoo,1X2 (60 min),KooKoo,Fortuna,2.80,0.5,1.079,,open,,mimo tiket,týmy > 10 zápasů; xG model (liiga_value) naopak chce Sport 52 %,,livesport
+2026-10-15,liiga,SaiPa – Hämeenlinna,1X2 (60 min),SaiPa,Veikkaus,1.87,0.5,1.147,,open,,mimo tiket,"týmy > 10 zápasů; jen xG model, hlavní model bez value",,liiga_value
+2026-10-15,nhl,Florida – Vancouver,Handicap (60 min),Vancouver +1.5,Tipsport,1.97,0.5,1.062,,open,,jen model,"trh bez value (EV trhu 0.96), brankáři nepotvrzeni",,nhl_value
+2026-10-15,nhl,Vegas – Calgary,Handicap (60 min),Calgary +1.5,Tipsport,2.03,0.5,1.086,,open,,jen model,"trh bez value (EV trhu 0.95), brankáři nepotvrzeni",,nhl_value
+2026-10-15,nhl,Tampa Bay – Seattle,1X2 (60 min),X,Fortuna,4.90,0.5,1.106,,open,,kurz > 3.2,remíza nad limitem kurzu,,nhl_value
+2026-10-15,nhl,New Jersey – NY Rangers,1X2 (60 min),X,Fortuna,4.40,0.5,1.057,,open,,kurz > 3.2,remíza nad limitem kurzu,,nhl_value
