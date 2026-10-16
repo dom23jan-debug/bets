@@ -43,6 +43,7 @@ before); football when the request names football (fotbal, a football league / c
    results via `football.livesport.league_page(path)`, closing odds via `football.livesport.odds_rows(id)`).
 3. **Scan**: `python3 -m football.daily [YYYY-MM-DD]` (all European leagues + UEFA cups with games that day;
    other regions by key, e.g. `... daily <date> usa1 bra1 jpn1`). One league: `python3 -m football.scan <key> <date>`.
+   Default ticket = high hit rate (tier A, odds 1.5-2.0, ~57 % won in the backtest); `--vse` = wide ticket (odds ≤ 3.2 + corners/cards).
 4. **Verify** every candidate (skill `football-value`: tiers A/B/C, team news via Sofascore/Livesport missing
    players, rotation, referee for cards, price re-check). Value = Czech price above the margin-free consensus of
    ~30-60 international books; the own model must agree. Model-only statistics (shots, fouls, offsides,

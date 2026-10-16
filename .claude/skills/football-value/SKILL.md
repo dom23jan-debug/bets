@@ -87,7 +87,18 @@ efficient in betting - most matches are "bez value"; say "dnes nesázet" when no
   their corner / card expectations are printed for information only. Corners / cards totals still get tier C
   vs the bet365 line (the model filter applies to statistics everywhere).
 - Prefer full-time main markets (1X2/AH/DNB/totals) over halves, HT/FT, correct score.
-- Max odds 3.2 on the ticket (user's choice, same as hockey) unless the user asks for longer odds.
+- **Default ticket = high hit rate** (user's choice 16 Oct 2026, after 1-1-1 on 15 Oct: "chci velkou úspěšnost"):
+  tier A only, odds 1.5-2.0, one bet per match. Backtest 2025/26 (first divisions, opening prices, 1 bet/match):
+  | ticket | bets | won | refund | lost | Ø odds | ROI | longest losing run |
+  |---|---|---|---|---|---|---|---|
+  | A, odds 1.5-2.0 (default) | 1 350 | 57 % | 8 % | 35 % | 1.73 | +5.9 % ±2.1 | 6 |
+  | A, odds 1.5-3.2 (`--vse`) | 1 735 | 47 % | 8 % | 45 % | 2.21 | +7.8 % ±2.5 | 9 |
+  | value at odds 1.3-1.5 | 1 104 | 67 % | 7 % | 26 % | 1.40 | +0.3 % ±1.8 | – |
+  | value at odds < 1.3 | 1 203 | 84 % | 3 % | 13 % | 1.17 | +1.5 % ±1.1 | – |
+  Below 1.5 the Czech margin eats the edge → never "safe" favourites at 1.2-1.4 just for the hit rate.
+  B / C (halves, corners, cards) and A at odds 2.0-3.2 go to the "Mimo tiket" list → `rejected.csv`
+  (reason_cat "mimo tiket – nižší úspěšnost"); `football.daily --vse` restores the wide ticket (odds ≤ 3.2, B, C)
+  when the user asks for it. Even at 57 % expect losing days: 3 bets say nothing, judge after 100+ bets.
 - A model-vs-consensus gap never creates value by itself (the model is behind the market: promoted teams,
   transfers, injuries). Value = consensus EV; the model only has to agree (EV_model ≥ 1).
 - Same match, several tier-A offers: take the best one (daily.py does), never stack correlated bets.

@@ -110,6 +110,6 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-14,maxa,Chomutov – Frýdek-Místek,1X2 (60 min),Frýdek-Místek,Chance,2.76,0.5,1.032,,open,,mimo tiket,"týmy > 10 zápasů; hraniční EV, model z 30. 9. chce jen overy",,livesport
 2026-10-14,maxa,Zlín – Sokolov,Počet gólů (1. třetina),Více než 1.5,Betano,2.15,0.5,1.126,,open,,totals,"jen model z 30. 9., totals bez edge",,maxa_markets
 2026-10-14,nl,Lausanne – Ajoie,Handicap (60 min),Ajoie +1.5,Chance,2.18,0.5,1.044,,open,,mimo tiket,týmy > 10 zápasů; jen Chance,,livesport
-2026-10-15,uecl,Univ. Craiova – Getafe,1X2 (zápas),Getafe,Tipsport,2.84,0.5,1.058,,open,,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; konsenzus 30 kanceláří; Getafe bez Ünala, Azóna, Mangaly",,football.daily
-2026-10-15,uecl,Hearts – Nordsjaelland,Sázka bez remízy (zápas),Nordsjaelland,Betano,1.83,0.5,1.033,,open,,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; Hearts bez Spittala, Halketta",,football.daily
-2026-10-15,ksa1,Al Hazem – Al Fateh,Žluté karty Al Hazem (zápas),Více než 2.5,Fortuna,3.00,0.5,1.288,,open,,jen model (S),statistika bez tržní reference,,football.daily
+2026-10-15,uecl,Univ. Craiova – Getafe,1X2 (zápas),Getafe,Tipsport,2.84,0.5,1.058,,loss,-0.5,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; konsenzus 30 kanceláří; Getafe bez Ünala, Azóna, Mangaly",,football.daily
+2026-10-15,uecl,Hearts – Nordsjaelland,Sázka bez remízy (zápas),Nordsjaelland,Betano,1.83,0.5,1.033,,push,0,AP – čeká na sken před výkopem,"pohár, > 3 h před výkopem; Hearts bez Spittala, Halketta",,football.daily
+2026-10-15,ksa1,Al Hazem – Al Fateh,Žluté karty Al Hazem (zápas),Více než 2.5,Fortuna,3.00,0.5,1.288,,loss,-0.5,jen model (S),statistika bez tržní reference,,football.daily
