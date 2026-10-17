@@ -120,23 +120,6 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-15,nhl,Vegas – Calgary,Handicap (60 min),Calgary +1.5,Tipsport,2.03,0.5,1.086,,loss,-0.5,jen model,"trh bez value (EV trhu 0.95), brankáři nepotvrzeni",,nhl_value
 2026-10-15,nhl,Tampa Bay – Seattle,1X2 (60 min),X,Fortuna,4.90,0.5,1.106,,win,1.95,kurz > 3.2,remíza nad limitem kurzu,,nhl_value
 2026-10-15,nhl,New Jersey – NY Rangers,1X2 (60 min),X,Fortuna,4.40,0.5,1.057,,loss,-0.5,kurz > 3.2,remíza nad limitem kurzu,,nhl_value
-2026-10-16,sk,Žilina – Zvolen,Dvojitá šance (60 min),X2,Chance,2.59,0.6,1.077,,open,,čísla proti modelu,"Zvolen skóre 18:33 a střely 260:304, model přeceňuje",,livesport
-2026-10-16,del,Iserlohn – Kolín n. R.,Vítěz (vč. prodl.),Iserlohn,Betano,2.80,0.5,1.039,,open,,čísla proti modelu,"Iserlohn skóre 17:34, střely 184:228; nízké EV",,livesport
-2026-10-16,sk,Spišská N. Ves – Košice,1X2 (1. třetina),Košice,Betano,3.20,0.5,1.036,,open,,třetina,"třetinový trh s velkým rozptylem, EV jen 1.036",,livesport
-2026-10-16,elh,Plzeň – Sparta Praha,Počet gólů (60 min),Více než 5.5,Fortuna,2.70,0.5,1.049,,open,,totals,totals bez edge,,livesport
-2026-10-16,liiga,Pelicans – Sport,Počet gólů (60 min),Méně než 4.5,Betano,2.18,0.5,1.047,,open,,totals,totals bez edge,,livesport
-2026-10-16,nl,Kloten – Ambri-Piotta,Počet gólů (60 min),Méně než 4.5,Chance,2.76,0.5,1.043,,open,,totals,totals bez edge,,livesport
-2026-10-16,fr,Anglet – Briancon,Počet gólů (60 min),Více než 5.5,Chance,2.16,0.5,1.039,,open,,totals,totals bez edge,,livesport
-2026-10-16,fr,Amiens – Marseille,Počet gólů (60 min),Více než 5.5,Tipsport,2.17,0.5,1.038,,open,,totals,totals bez edge,,livesport
-2026-10-16,liiga,JYP – Kärpät,1X2 (60 min) [FAV],JYP,Betano,2.02,1.0,,,open,,čísla proti modelu,"model nad trhem jen o 0.8 pb, xG model (liiga_value) JYP 48.1 % pod trhem 49.5 %",,livesport
-2026-10-16,liiga,Tappara – Lukko,Vítěz (vč. prodl.),Lukko,Tipsport,2.69,0.5,1.097,,open,,mimo tiket,týmy > 10 zápasů; xG model Lukko 26 % vs trh 25 %,,livesport
-2026-10-16,liiga,Jokerit – Ässät,1X2 (60 min),Ässät,Veikkaus,2.95,0.5,1.220,,open,,mimo tiket,"týmy > 10 zápasů; oba modely chtějí Ässät (xG 41 %, hlavní 38.5 %)",,liiga_value
-2026-10-16,liiga,Hämeenlinna – Ilves,1X2 (60 min),Hämeenlinna,Veikkaus,3.95,0.5,1.286,,open,,kurz > 3.2,"jen xG model, týmy > 10 zápasů, nad limitem kurzu",,liiga_value
-2026-10-16,liiga,TPS Turku – Kiekko-Espoo,1X2 (60 min),TPS Turku,Veikkaus,2.17,0.5,1.104,,open,,jen model,"jen xG model, hlavní model bez value; týmy > 10 zápasů",,liiga_value
-2026-10-16,fr,Grenoble – Nice,1X2 (60 min),Nice,Fortuna,7.00,0.5,1.128,,open,,kurz > 3.2,nad limitem kurzu,,livesport
-2026-10-16,fr,Gap – Bordeaux,1X2 (60 min),Gap,Fortuna,4.80,0.5,1.075,,open,,kurz > 3.2,nad limitem kurzu,,livesport
-2026-10-16,del,Eisbären Berlín – Mnichov,1X2 (60 min),Mnichov,Chance,3.63,0.5,1.043,,open,,kurz > 3.2,"nad limitem kurzu, Tipsport bez kurzu",,livesport
-2026-10-16,elh,Třinec – Mladá Boleslav,Vítěz (vč. prodl.),Mladá Boleslav,Chance,4.04,0.5,1.041,,open,,kurz > 3.2,nad limitem kurzu,,livesport
 2026-10-17,ita2,Benevento – L.R. Vicenza,Počet – žluté karty (zápas),více než 4.5,Fortuna,2.28,0.5,1.336,,open,,mimo tiket – nižší úspěšnost,[C!] kurz > 2.0; model EV 1.405,,football.daily
 2026-10-17,ita2,Pisa – Cremonese,Počet – žluté karty (zápas),více než 4.5,Fortuna,2.71,0.5,1.311,,open,,mimo tiket – nižší úspěšnost,[C!] kurz > 2.0; model EV 1.052,,football.daily
 2026-10-17,sco1,Dundee FC – Rangers,Počet – žluté karty (zápas),méně než 3.5,Fortuna,1.92,0.5,1.172,,open,,mimo tiket – nižší úspěšnost,[C!] rohy/karty (C) jen s --vse; model EV 1.078,,football.daily
@@ -158,3 +141,38 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-17,svk1,Trnava – Slovan Bratislava,Počet – žluté karty (zápas),méně než 6.5,Fortuna,1.83,0.5,1.333,,open,,jen model (S),statistika bez tržní reference; EV model 1.333,,football.daily
 2026-10-17,nor1,HamKam – Bodo/Glimt,Bodo/Glimt – rohy (zápas),méně než 5.5,Fortuna,2.72,0.5,1.333,,open,,jen model (S),statistika bez tržní reference; EV model 1.333,,football.daily
 2026-10-17,fra1,Troyes – Lens,Více – rohy (zápas),Troyes,Fortuna,2.48,0.5,1.325,,open,,jen model (S),statistika bez tržní reference; EV model 1.325,,football.daily
+2026-10-16,sk,Žilina – Zvolen,Dvojitá šance (60 min),X2,Chance,2.59,0.6,1.077,2.59,loss,-0.6,čísla proti modelu,"Zvolen skóre 18:33 a střely 260:304, model přeceňuje",,livesport
+2026-10-16,del,Iserlohn – Kolín n. R.,Vítěz (vč. prodl.),Iserlohn,Betano,2.80,0.5,1.039,2.72,win,0.9,čísla proti modelu,"Iserlohn skóre 17:34, střely 184:228; nízké EV",,livesport
+2026-10-16,sk,Spišská N. Ves – Košice,1X2 (1. třetina),Košice,Betano,3.20,0.5,1.036,3.20,loss,-0.5,třetina,"třetinový trh s velkým rozptylem, EV jen 1.036",,livesport
+2026-10-16,elh,Plzeň – Sparta Praha,Počet gólů (60 min),Více než 5.5,Fortuna,2.70,0.5,1.049,2.60,loss,-0.5,totals,totals bez edge,,livesport
+2026-10-16,liiga,Pelicans – Sport,Počet gólů (60 min),Méně než 4.5,Betano,2.18,0.5,1.047,2.15,win,0.59,totals,totals bez edge,,livesport
+2026-10-16,nl,Kloten – Ambri-Piotta,Počet gólů (60 min),Méně než 4.5,Chance,2.76,0.5,1.043,2.67,loss,-0.5,totals,totals bez edge,,livesport
+2026-10-16,fr,Anglet – Briancon,Počet gólů (60 min),Více než 5.5,Chance,2.16,0.5,1.039,2.00,loss,-0.5,totals,totals bez edge,,livesport
+2026-10-16,fr,Amiens – Marseille,Počet gólů (60 min),Více než 5.5,Tipsport,2.17,0.5,1.038,2.19,win,0.585,totals,totals bez edge,,livesport
+2026-10-16,liiga,JYP – Kärpät,1X2 (60 min) [FAV],JYP,Betano,2.02,1.0,,1.93,loss,-1,čísla proti modelu,"model nad trhem jen o 0.8 pb, xG model (liiga_value) JYP 48.1 % pod trhem 49.5 %",,livesport
+2026-10-16,liiga,Tappara – Lukko,Vítěz (vč. prodl.),Lukko,Tipsport,2.69,0.5,1.097,2.56,win,0.845,mimo tiket,týmy > 10 zápasů; xG model Lukko 26 % vs trh 25 %,,livesport
+2026-10-16,liiga,Jokerit – Ässät,1X2 (60 min),Ässät,Veikkaus,2.95,0.5,1.220,,win,0.975,mimo tiket,"týmy > 10 zápasů; oba modely chtějí Ässät (xG 41 %, hlavní 38.5 %)",,liiga_value
+2026-10-16,liiga,Hämeenlinna – Ilves,1X2 (60 min),Hämeenlinna,Veikkaus,3.95,0.5,1.286,,win,1.475,kurz > 3.2,"jen xG model, týmy > 10 zápasů, nad limitem kurzu",,liiga_value
+2026-10-16,liiga,TPS Turku – Kiekko-Espoo,1X2 (60 min),TPS Turku,Veikkaus,2.17,0.5,1.104,,win,0.585,jen model,"jen xG model, hlavní model bez value; týmy > 10 zápasů",,liiga_value
+2026-10-16,fr,Grenoble – Nice,1X2 (60 min),Nice,Fortuna,7.00,0.5,1.128,7.20,loss,-0.5,kurz > 3.2,nad limitem kurzu,,livesport
+2026-10-16,fr,Gap – Bordeaux,1X2 (60 min),Gap,Fortuna,4.80,0.5,1.075,4.30,loss,-0.5,kurz > 3.2,nad limitem kurzu,,livesport
+2026-10-16,del,Eisbären Berlín – Mnichov,1X2 (60 min),Mnichov,Chance,3.63,0.5,1.043,3.63,win,1.315,kurz > 3.2,"nad limitem kurzu, Tipsport bez kurzu",,livesport
+2026-10-16,elh,Třinec – Mladá Boleslav,Vítěz (vč. prodl.),Mladá Boleslav,Chance,4.04,0.5,1.041,4.09,loss,-0.5,kurz > 3.2,nad limitem kurzu,,livesport
+2026-10-17,shl,Djurgården – Malmö,1X2 (60 min),Malmö,Betano,2.72,0.5,1.062,,open,,čísla proti modelu,"xG Djurgården 25.6:24.1 (smůla v koncovce), Malmö 19.6:20.1 (štěstí)",,livesport
+2026-10-17,shl,Brynäs – Växjö,Handicap (60 min),Brynäs -1.5,Betano,2.50,0.5,1.038,,open,,čísla proti modelu,xG Växjö 23.2:20.6 lepší než Brynäs 25.0:23.7,,livesport
+2026-10-17,shl,Brynäs – Växjö,Vítěz (vč. prodl.) [SAFE],Brynäs,Fortuna,1.54,1.0,,,open,,čísla proti modelu,"xG Växjö lepší než Brynäs, SAFE nepouštět",,livesport
+2026-10-17,nl,Ajoie – Zug,Počet gólů (60 min),Méně než 5,Tipsport,2.68,0.5,1.039,,open,,totals,totals bez edge,,livesport
+2026-10-17,nl,Fribourg – Lugano,Počet gólů (60 min),Méně než 5.5,Tipsport,2.21,0.5,1.054,,open,,totals,"totals bez edge, týmy > 10 zápasů",,livesport
+2026-10-17,maxa,Tábor – Třebíč,Počet gólů (60 min),Méně než 4.5,Chance,2.15,0.7,1.064,,open,,totals,"totals bez edge, týmy > 10 zápasů",,livesport
+2026-10-17,sk,B. Bystrica – Zvolen,Vítěz (vč. prodl.) [SAFE],B. Bystrica,Fortuna,1.68,1.0,,,open,,pravidlo,Zvolen už 11 zápasů (SAFE jen do 10),,livesport
+2026-10-17,maxa,Přerov – Pardubice B,1X2 (60 min) [FAV],Pardubice B,Fortuna,2.04,1.0,,,open,,B-tým,"B-tým s nejistou sestavou, model nad trhem jen 2.5 pb, maxa_markets bez value",,livesport
+2026-10-17,sk,Spišská N. Ves – Poprad,Vítěz (vč. prodl.),Poprad,Fortuna,2.05,0.5,1.038,,open,,mimo tiket,týmy > 10 zápasů; value jen u Fortuny (Tipsport 1.89),,livesport
+2026-10-17,maxa,Frýdek-Místek – Jihlava,Vítěz (vč. prodl.),Frýdek-Místek,Tipsport,2.38,0.5,1.034,,open,,mimo tiket,týmy > 10 zápasů,,livesport
+2026-10-17,liiga,Jukurit – Tappara,Vítěz (vč. prodl.),Jukurit,Betano,2.35,0.5,1.048,,open,,mimo tiket,týmy > 10 zápasů; oba modely chtějí Jukurit (xG 60 min 36 % vs trh 31 %),,livesport
+2026-10-17,liiga,KalPa – Pelicans,1X2 (60 min),Pelicans,Veikkaus,3.00,0.5,1.346,,open,,jen model,"jen xG model, hlavní model bez value; týmy > 10 zápasů",,liiga_value
+2026-10-17,liiga,SaiPa – IFK Helsinki,1X2 (60 min),SaiPa,Veikkaus,1.94,0.5,1.099,,open,,jen model,jen xG model; týmy > 10 zápasů,,liiga_value
+2026-10-17,liiga,Ässät – TPS Turku,1X2 (60 min),Ässät,Veikkaus,2.52,0.5,1.056,,open,,jen model,jen xG model; týmy > 10 zápasů,,liiga_value
+2026-10-17,liiga,Kärpät – KooKoo,1X2 (60 min),KooKoo,Chance,4.00,0.5,1.057,,open,,kurz > 3.2,"nad limitem kurzu, týmy > 10 zápasů, xG model bez value",,livesport
+2026-10-17,nhl,Tampa Bay – Vancouver,Handicap (60 min),Vancouver +1.5,Betano,2.25,0.5,1.060,,open,,brankáři,"brankáři ráno nepotvrzeni, NHL v deníku 0/4; přepočítat po 17:00",,nhl_value
+2026-10-17,nhl,Florida – Seattle,Vítěz (vč. prodl.),Seattle,Fortuna,2.65,0.5,1.067,,open,,brankáři,brankáři ráno nepotvrzeni; přepočítat po 17:00,,nhl_value
+2026-10-17,nhl,Vegas – Pittsburgh,Handicap (60 min),Pittsburgh +1.5,Betano,1.87,0.5,1.112,,open,,brankáři,"Pittsburgh hraje 2. zápas za 2 dny, brankáři nepotvrzeni; přepočítat po 17:00",,nhl_value

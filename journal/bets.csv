@@ -37,10 +37,16 @@ date,league,match,market,selection,bookmaker,odds,stake_pct,ev,closing_odds,resu
 2026-10-15,del,Wolfsburg – Krefeld,Sázka bez remízy 60 min,Krefeld,Chance,2.96,1.2,1.192,2.65,push,0
 2026-10-15,shl,Växjö – Skellefteå,1X2 60 min,Skellefteå,Chance,2.31,0.9,1.090,2.09,win,1.179
 2026-10-15,shl,Linköping – Frölunda,1X2 60 min,Linköping,Betano,3.15,0.5,1.060,2.57,loss,-0.5
-2026-10-16,fr,Cergy-Pontoise – Rouen,Vítěz vč. prodl.,Cergy-Pontoise,Fortuna,3.05,0.5,1.078,,open,
-2026-10-16,sk,Lip. Mikuláš – Slovan Bratislava,Vítěz vč. prodl.,Lip. Mikuláš,Chance,2.64,0.5,1.068,,open,
-2026-10-16,sk,Prešov – Nitra,1X2 60 min [FAV],Nitra,Chance,1.50,1.0,,,open,
-2026-10-16,fr,Angers – Chamonix Mont-Blanc,1X2 60 min [FAV],Angers,Betano,1.52,1.0,,,open,
 2026-10-17,fra1,Štrasburk – PSG,Počet gólů (zápas),Méně než 4,Fortuna,1.71,1.7,1.049,,open,
 2026-10-17,aut1,A. Lustenau – LASK,Počet gólů (zápas),Méně než 3.5,Tipsport,1.92,0.7,1.026,,open,
 2026-10-17,eng2,Millwall – Lincoln,Asijský handicap (zápas),Lincoln +1,Betano,1.70,0.8,1.022,,open,
+2026-10-16,fr,Cergy-Pontoise – Rouen,Vítěz vč. prodl.,Cergy-Pontoise,Fortuna,3.05,0.5,1.078,2.50,win,1.025
+2026-10-16,sk,Lip. Mikuláš – Slovan Bratislava,Vítěz vč. prodl.,Lip. Mikuláš,Chance,2.64,0.5,1.068,2.64,win,0.82
+2026-10-16,sk,Prešov – Nitra,1X2 60 min [FAV],Nitra,Chance,1.50,1.0,,1.50,loss,-1
+2026-10-16,fr,Angers – Chamonix Mont-Blanc,1X2 60 min [FAV],Angers,Betano,1.52,1.0,,1.52,loss,-1
+2026-10-17,shl,Timra – IF Bjorkloven,1X2 60 min,Timra,Chance,1.86,0.6,1.041,,open,
+2026-10-17,shl,Luleå – HV 71,Handicap 60 min,HV 71 +1.5,Betano,1.62,0.6,1.031,,open,
+2026-10-17,shl,Linköping – Färjestad,1X2 60 min [FAV],Färjestad,Tipsport,1.83,1.0,,,open,
+2026-10-17,shl,Rögle – Örebro,1X2 60 min [FAV],Rögle,Betano,1.78,1.0,,,open,
+2026-10-17,maxa,Sokolov – Litoměřice,1X2 60 min [FAV],Litoměřice,Tipsport,2.05,1.0,,,open,
+2026-10-17,maxa,Vsetín – Slavia Praha,1X2 60 min [FAV],Vsetín,Fortuna,1.74,1.0,,,open,
